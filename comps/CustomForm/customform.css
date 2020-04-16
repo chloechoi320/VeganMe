@@ -1,0 +1,8 @@
+.form_box {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    height: 50px;
+    width: 300px;
+    outline: none;
+}
