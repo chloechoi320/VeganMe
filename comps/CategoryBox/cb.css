@@ -1,0 +1,30 @@
+.Category-Box {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    color: #1e1d1d;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 35px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.Category-Box-Inner {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 0 0 10px;
+}
+
+.Category-Box-Inner img {
+    height: 25px;
+    width: 25px;
+    object-fit: contain;
+    margin-right: 7px;
+}
+
+.Category-Box-Inner::selection {
+    background: none;
+    color: color;
+}

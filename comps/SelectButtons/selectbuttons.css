@@ -1,0 +1,15 @@
+.Select-Btn-Box {
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.Select-Btn-Box-Inner::selection {
+    background: none;
+    color: color;
+}
