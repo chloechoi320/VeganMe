@@ -1,4 +1,18 @@
-.menu {
+html, body {
+    margin: 0;
+}
+
+.openbtn img {
+    height: 20px;
+    margin: 5px;
+}
+
+.openbtn {
+    background-color: transparent;
+    border: transparent;
+}
+
+/* .menu {
     height: 100%;
     width: 0;
     position: fixed;
@@ -42,4 +56,4 @@
 
 #main {
     transition: margin-left .5s;
-}
+} */

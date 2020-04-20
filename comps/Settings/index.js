@@ -1,8 +1,7 @@
 import React from 'react';
-import './hamburgermenu.css';
-import './Hamburger.js';
+import './settings.css';
 
-const HamburgerMenu = () => <div>
+const Settings = () => <div>
     <div id="mymenu" class="menu">
         <a href="javascript:voide(0)" class="closebtn" onClick="closeNav()">Back</a>
         <a href="#">A</a>
@@ -11,8 +10,8 @@ const HamburgerMenu = () => <div>
         <a href="#">D</a>
     </div>
     <div id="main">
-        <button class="openbtn" onClick="openNav()">☰</button>
+        <button class="openbtn" onClick="openNav()"><img src={require('./settingsimg.png')}></img></button>
     </div>
 </div>
 
-export default HamburgerMenu;
+export default Settings;
