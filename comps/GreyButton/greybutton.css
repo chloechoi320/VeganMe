@@ -1,0 +1,23 @@
+.grey-btn {
+    background-color: #efeeeb;
+    box-shadow: 0 0 5px #00000029;
+    border: none;
+    border-radius: 10px;
+    width: 175px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.grey-btn-icon {
+    width: 13px;
+    height: 13px;
+    margin: 0 15px 5px 10px;
+}
+
+.grey-btn-label {
+    color: #1e1d1d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
