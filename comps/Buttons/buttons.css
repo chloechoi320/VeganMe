@@ -1,15 +1,19 @@
-.Select-Btn-Box {
+.Btn-Box {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18pt;
     border-radius: 50px;
+    color: #efeeeb;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 65px;
     height: 65px;
+    width: 280px;
     cursor: pointer;
     margin-bottom: 10px;
 }
 
-.Select-Btn-Box-Inner::selection {
+.Btn-Box-Inner::selection {
     background: none;
     color: color;
 }
