@@ -5,7 +5,7 @@ const CustomForm = ({text, color}) =>
 <div>
     <input 
     style = {
-        {borderBottom: "solid 1px" + color}
+        {borderBottom: "solid 1px" + color} 
     }
         className="form_box"
         type={text} 
