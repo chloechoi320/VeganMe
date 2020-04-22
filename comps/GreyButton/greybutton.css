@@ -10,9 +10,10 @@
 }
 
 .grey-btn-icon {
-    width: 13px;
-    height: 13px;
-    margin: 0 15px 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px 0 10px;
 }
 
 .grey-btn-label {
