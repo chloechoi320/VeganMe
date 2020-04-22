@@ -2,8 +2,8 @@ import React from 'react';
 import './header.css';
 
 const Header = ({text, fontSize, color}) => <div className="custom_header"
-    style={{text:text, fontSize: fontSize, color:color}}>
-    <h1>Header</h1>
+    style={{fontSize: fontSize, color:color}}>
+    <h1>{text}</h1>
 </div>
 
 Header.defaultProps = {
