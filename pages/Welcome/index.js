@@ -1,11 +1,19 @@
 import React, {useState, useEffect} from "react";
 import "./welcome.css";
 
+import Link from 'next/link';
+import Router from 'next/router';
+
 import Header from "../../comps/Header";
 import Buttons from "../../comps/Buttons";
 
+function ClickHome() {
+    document.querySelector(".welcome-pg").style.right = "-100%";
+    Router.push("/Recipe");
+}
+
 const WelcomePage = () => {
-    return <div className="welcome-pg">
+    return <div className="welcome-pg" onClick={ClickHome}>
         <div className="VMLogo">logo</div>
         <div className="welcome-pg-h">
             <Header text="Welcome to VeganMe!" fontSize={24} />
