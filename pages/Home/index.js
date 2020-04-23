@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "./home.css";
+import Link from 'next/link';
+import Router from 'next/router';
 import Settings from "../../comps/Settings";
 import Header from "../../comps/Header";
 import { MdRestaurant } from 'react-icons/md';
@@ -11,8 +13,13 @@ import CategoryBox from '../../comps/CategoryBox';
 import CategoryBoxforRecipes from '../../comps/CategoryBoxforRecipes';
 import NavigationBar from '../../comps/NavigationBar';
 
+function ClickHP() {
+    document.querySelector("#home_page").style.right = "-100%";
+    Router.push("/Recipe");
+}
+
 const Home = ({}) => {
-    return <div id="home_page">
+    return <div id="home_page" onClick={ClickHP}>
     <div id="home_settings">
         <Settings />
     </div>
