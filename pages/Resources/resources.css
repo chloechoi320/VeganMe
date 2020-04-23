@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+
+#resources_page {
+    width: 375px;
+    height: 910px;
+    border: #000 1px solid;
+    position: relative;
+}
+
+#resources_header {
+    display: flex;
+    align-items: center;
+    margin: 50px 0 70px 40px;
+    padding-bottom: 15px;
+    border-bottom: solid 1px #D2DAC3;
+    left: 50%;
+    width: 300px;
+}
+
+#favourite_icon {
+    width: 25px;
+    height: 25px;
+    background-color: #789174;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+#resources_list {
+    margin-bottom: 20px;
+}
