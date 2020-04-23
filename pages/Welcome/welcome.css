@@ -1,0 +1,44 @@
+.welcome-pg {
+    width: 375px;
+    height: 812px;
+    box-shadow: 0 0 5px #1e1d1d74;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.VMLogo {
+    background-color: #789174;
+    box-shadow: 0 0 5px #789174;
+    border-radius: 50%;
+    color: white;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-pg-h {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.welcome-txt {
+    font-size: 16px;
+    color: #1e1d1d;
+    margin-bottom: 150px;
+}
+
+.welcome-url {
+    margin-top: 15px;
+    color: #789174;
+    font-weight: bold;
+}
