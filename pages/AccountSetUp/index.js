@@ -17,7 +17,7 @@ import { FaUsers } from "react-icons/fa"
 
 function ClickASU() {
     document.querySelector("#asu_page").style.right = "-100%";
-    Router.push("/ChloeHome");
+    Router.push("/Recipe");
 }
 
 

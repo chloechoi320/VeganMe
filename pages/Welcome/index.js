@@ -9,7 +9,7 @@ import Buttons from "../../comps/Buttons";
 
 function ClickHome() {
     document.querySelector(".welcome-pg").style.right = "-100%";
-    Router.push("/Recipe");
+    Router.push("/AccountSetUp");
 }
 
 const WelcomePage = () => {
