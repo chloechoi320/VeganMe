@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "./asu.css";
+import Link from 'next/link';
+import Router from 'next/router';
 import Header from "../../comps/Header";
 import CustomForm from "../../comps/CustomForm";
 import Buttons from "../../comps/Buttons";
@@ -13,9 +15,14 @@ import { FaHeart } from "react-icons/fa"
 import { FaUser } from "react-icons/fa"
 import { FaUsers } from "react-icons/fa"
 
+function ClickASU() {
+    document.querySelector("#asu_page").style.right = "-100%";
+    Router.push("/Recipe");
+}
+
 
 const AccountSetUp = ({}) => {
-    return <div id="asu_page">
+    return <div id="asu_page" onClick={ClickASU}>
         <div id="asu_container">
             <div id="asu_logo">LOGO</div>
 
