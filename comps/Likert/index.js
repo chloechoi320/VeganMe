@@ -1,5 +1,5 @@
 import React from 'react';
-// import Likert from 'react-likert-scale';
+import Likert from 'react-likert-scale';
 import './likert.css';
  
 export default () => {

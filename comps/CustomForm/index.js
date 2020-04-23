@@ -1,5 +1,6 @@
 import React from 'react';
 import './customform.css';
+import Header from "../../comps/Header";
 
 const CustomForm = ({text, color}) => 
 <div>
@@ -10,7 +11,7 @@ const CustomForm = ({text, color}) =>
         className="form_box"
         type={text} 
         placeholder={text}/>
-    <p><b>{text}</b></p>
+    <p><Header text={text} fontSize={8}/></p>
 </div>
 
 CustomForm.defaultProps = {
