@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "./recipe.css";
+import Link from 'next/link';
+import Router from 'next/router';
 
 import BackHeader from "../../comps/BackHeader";
 import Header from "../../comps/Header";
@@ -11,8 +13,13 @@ import NavigationBar from "../../comps/NavigationBar";
 import {FaStar} from 'react-icons/fa';
 import {IoIosArrowRoundUp} from 'react-icons/io';
 
+function ClickRP() {
+    document.querySelector(".recipe-pg").getElementsByClassName.right = "-100%";
+    Router.push("/Favourites");
+}
+
 const RecipePage = () => {
-    return <div className="recipe-pg">
+    return <div className="recipe-pg" onClick={ClickRP}>
         <BackHeader />
         <div className="rp-container">
             <Header text="Recipe Name" fontSize={14}/>
