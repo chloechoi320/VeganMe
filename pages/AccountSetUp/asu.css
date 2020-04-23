@@ -1,8 +1,14 @@
 #asu_page {
     width: 375px;
-    height: 1000px;
+    height: auto;
     border: #000 1px solid;
     position: relative;
+    margin: 0 auto;
+}
+
+#asu_container {
+    margin: 75px 0 75px 35px;
+    max-width: 300px;
 }
 
 #asu_logo {
@@ -10,11 +16,23 @@
     height: 75px;
     background-color: #D2DAC3;
     border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#asu_form {
+    margin: 25px 0 50px 0;
+}
+
+.asu_question_container {
+    margin-bottom: 50px;
 }
 
 .display_flex {
     display: flex;
     justify-content: space-around;
+    margin-top: 50px;
 }
 
 .selection {
@@ -47,4 +65,9 @@
 
 #asu_health {
     background-color: #B55139;
+}
+
+#asu_button {
+    display: flex;
+    justify-content: center;
 }
