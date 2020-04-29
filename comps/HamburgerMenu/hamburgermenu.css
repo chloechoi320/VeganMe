@@ -1,0 +1,17 @@
+.hm-container {
+    background-color: #efeeeb;
+    box-shadow: 0 0 5px #00000029;
+    width: 187px;
+    height: 802px;
+    padding-top: 25px;
+}
+
+.hm-container ul {
+    list-style-type: none;
+}
+
+.hm-container li {
+    margin-bottom: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
