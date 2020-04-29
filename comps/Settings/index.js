@@ -1,5 +1,6 @@
 import React from 'react';
 import './settings.css';
+import {FiMenu} from 'react-icons/fi';
 
 const Settings = () => <div>
     <div id="mymenu" class="menu">
@@ -10,7 +11,8 @@ const Settings = () => <div>
         <a href="#">D</a> */}
     </div>
     <div id="main">
-        <button class="openbtn" onClick="openNav()"><img src={require('./settingsimg.png')}></img></button>
+        {/* <button class="openbtn" onClick="openNav()"><img src={require('./settingsimg.png')}></img></button> */}
+        <FiMenu size="2em"/>
     </div>
 </div>
 
