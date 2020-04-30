@@ -27,7 +27,9 @@ const RecipePage = () => {
     return <div className="recipe-pg" onClick={ClickRP}>
         <BackHeader />
         <div className="rp-container">
-            <Header text="Savoury Breakfast Bowl" fontSize={14}/>
+            <div rp-head>
+                <Header text="Savoury Breakfast Bowl" fontSize={14}/>
+            </div>
             <div className="rp-details">
                 <div>Author: Deryn Macey Prep Time: 10 min</div>
                 <div>Cook Time: 10 min Category: Recipes</div>
