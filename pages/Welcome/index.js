@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "./welcome.css";
 
+
 import Link from 'next/link';
 import Router from 'next/router';
 
@@ -14,7 +15,7 @@ function ClickHome() {
 
 const WelcomePage = () => {
     return <div className="welcome-pg" onClick={ClickHome}>
-        <div className="VMLogo">logo</div>
+        <div className="VMLogo"><img src={require('./logo.png')}></img></div>
         <div className="welcome-pg-h">
             <Header text="Welcome to VeganMe!" fontSize={24} />
         </div>
