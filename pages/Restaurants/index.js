@@ -10,7 +10,7 @@ import NavigationBar from "../../comps/NavigationBar";
 import {FaWineGlassAlt} from 'react-icons/fa';
 
 function ClickRest() {
-    document.querySelector(".rest").style.right = "-100%";
+    document.querySelector(".rest-listings").style.right = "-100%";
     Router.push("/VeganPizzaHouse");
 }
 
@@ -22,10 +22,8 @@ const RestaurantsPage = ({}) => {
                 <div className="rest-icon"><FaWineGlassAlt size="0.75em" color="#FFF"/></div>
                 <Header text="Restaurants" fontSize={12}/>
             </div>
-            <div className="rest-listings">
-                <div className="rest" onClick={ClickRest}>
-                    <Restaurants name="Vegan Pizza House" />
-                </div>
+            <div className="rest-listings" onClick={ClickRest}>
+                <Restaurants name="Vegan Pizza House" />
                 <Restaurants name ="Chickpea Restaurant" />
                 <Restaurants name ="Vegan Cave Cafe" />
                 <Restaurants name ="Dharma Kitchen" />
@@ -37,10 +35,9 @@ const RestaurantsPage = ({}) => {
                 <Restaurants name ="The Acorn Restaurant" />
             </div>
         </div>
-        <NavigationBar />
-        {/* <div className="nav-bar">
+        <div className="nav-bar">
             <NavigationBar />
-        </div> */}
+        </div>
         {/* dude i am so confused. sometimes you don't need a div, sometimes the position is absolute and other times it's relative wth. */}
     </div>
 }
