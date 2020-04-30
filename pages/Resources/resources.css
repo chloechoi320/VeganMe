@@ -3,6 +3,7 @@ body {
 }
 
 #resources_page {
+    margin: 0 auto;
     width: 375px;
     height: 910px;
     border: #000 1px solid;
