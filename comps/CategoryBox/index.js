@@ -6,7 +6,7 @@ import { MdRestaurant } from 'react-icons/md'
 const CategoryBox = ({headerText, defaultText, description}) => 
 
 <div className="category_container">
-    <div className="category_image"></div>
+    <div className="category_image"><img src={require ('../../pages/Recipe/dish.png')}></img></div>
     <div className="category_header_container">
         <Header fontSize={10} text={headerText}/>
         <p class="category_description">{description}</p>

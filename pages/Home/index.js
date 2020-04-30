@@ -12,15 +12,22 @@ import GreyButton from '../../comps/GreyButton';
 import CategoryBox from '../../comps/CategoryBox';
 import CategoryBoxforRecipes from '../../comps/CategoryBoxforRecipes';
 import NavigationBar from '../../comps/NavigationBar';
+import GBforCategories from '../../comps/GBforCategories';
+import GBforClose from '../../comps/GBforClose';
 
-function ClickHP() {
-    document.querySelector("#home_page").style.right = "-100%";
-    Router.push("/Recipe");
+function ClickST() {
+    document.querySelector("#home_settings").style.right = "-100%";
+    Router.push("/Homemenu");
+}
+
+function ClickGB() {
+    document.querySelector("#home_greybutton").style.right = "-100%";
+    Router.push("/Categories")
 }
 
 const Home = ({}) => {
-    return <div id="home_page" onClick={ClickHP}>
-    <div id="home_settings">
+    return <div id="home_page">
+    <div id="home_settings" onClick={ClickST}>
         <Settings />
     </div>
     <div className="head">
@@ -31,9 +38,8 @@ const Home = ({}) => {
         <Header text="Good Afternoon!" fontSize={14}/>
     </div>
     </div>
-    <div id="home_greybutton">
-    {/* <IoMdApps size="2em"/>*/}
-    <GreyButton text="Categories"></GreyButton>
+    <div id="home_greybutton" onClick={ClickGB}>
+    <GBforCategories />
     </div>
     <div id="home_categorybox1">
         <CategoryBox description="This savory vegan breakfast bowl recipe features healthy…"/>
