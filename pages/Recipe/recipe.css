@@ -5,14 +5,14 @@ body {
 .recipe-pg {
     margin: 0 auto;
     width: 375px;
-    height: 2284px;
+    height: auto;
     position: relative;
     box-shadow: 0 0 5px #1e1d1d74;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #1e1d1d; */
+    color: #1e1d1d;
 }
 
 .rp-container {
@@ -26,12 +26,6 @@ body {
     font-weight: bold;
     font-size: 10.72px;
     color: #1e1d1d40;
-}
-
-img {
-    max-width: 300px;
-    object-fit: contain;
-    margin: 35px 0;
 }
 
 .rp-favourite {
@@ -78,7 +72,7 @@ img {
 }
 
 .gry-btn {
-    margin-bottom: 150px;
+    margin-bottom: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,6 +81,7 @@ img {
 .nav-bar {
     position: relative;
     width: 375px;
+    margin-top: 80px;
 }
 
 .btm-img {
