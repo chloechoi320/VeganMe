@@ -90,8 +90,8 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
-    height: 305px;
-    width: 305px;
+    height: 300px;
+    width: 300px;
     margin: 35px 0;
 }
 
@@ -100,7 +100,7 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
-    width: 305px;
+    width: 300px;
     height: 171.56px;
     margin: 35px 0;
 }
