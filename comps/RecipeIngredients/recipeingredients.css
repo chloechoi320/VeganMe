@@ -3,15 +3,8 @@
     font-size: 10.72px;
 }
 
-.r-ingredients, .r-ingredients-topic {
-    font-weight: bold;
-    color: #789174;
-}
-
-.r-ingredients {
-    margin-bottom: 32px;
-}
-
 .r-ingredients-list {
     color: #1e1d1d;
+    position: relative;
+    left: -15px;
 }
