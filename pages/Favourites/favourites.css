@@ -5,7 +5,7 @@ body {
 #favourites_page {
     margin: 0 auto;
     width: 375px;
-    height: 812px;
+    height: auto;
     border: #000 1px solid;
     position: relative;
 }
@@ -14,6 +14,9 @@ body {
     display: flex;
     align-items: center;
     margin: 50px 0 100px 40px;
+    border-bottom: solid 1px #D2DAC3;
+    padding-bottom: 15px;
+    width: 300px;
 }
 
 #favourite-star-icon {
@@ -29,5 +32,13 @@ body {
 
 #favourites_box {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+}
+
+.nav-bar {
+    position: relative;
+    width: 375px;
+    margin-top: 80px;
 }

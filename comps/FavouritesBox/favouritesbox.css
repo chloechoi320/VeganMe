@@ -5,24 +5,32 @@
     border-radius: 25px;
     position: relative;
     box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.15);
+    margin-bottom: 75px;
 }
 
 .favourites_image {
-    /* background-color: #0f0f0f; */
+/* <<<<<<< sophia */
+    background-color: #0f0f0f;
+    background-size: cover;
+    background-position: center;
     position: relative;
+/* ======= */
+    /* background-color: #0f0f0f; */
+/*     position: relative;
     top: 0;
-    width: 100%;
+    width: 100%; */
+/* >>>>>>> master */
     height: 175px;
     border-radius: 25px 25px 0 0;
 }
-
+/* 
 .favourites_image img {
     position: relative;
     top: 0;
     height: 175px;
     /* width: 302px; */
     width: 100%;
-}
+} */
 
 .favourites_icon {
     display: flex;

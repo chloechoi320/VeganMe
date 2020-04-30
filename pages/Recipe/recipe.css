@@ -60,6 +60,14 @@ img {
 
 .rp-desc {
     margin-bottom: 35px;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.r-ingredients {
+    font-size: 10.72px;
+    font-weight: bold;
+    color: #789174;
 }
 
 .line {
