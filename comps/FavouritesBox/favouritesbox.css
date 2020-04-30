@@ -9,28 +9,13 @@
 }
 
 .favourites_image {
-/* <<<<<<< sophia */
     background-color: #0f0f0f;
     background-size: cover;
     background-position: center;
     position: relative;
-/* ======= */
-    /* background-color: #0f0f0f; */
-/*     position: relative;
-    top: 0;
-    width: 100%; */
-/* >>>>>>> master */
     height: 175px;
     border-radius: 25px 25px 0 0;
 }
-/* 
-.favourites_image img {
-    position: relative;
-    top: 0;
-    height: 175px;
-    /* width: 302px; */
-    width: 100%;
-} */
 
 .favourites_icon {
     display: flex;

@@ -5,7 +5,7 @@ body {
 .recipe-pg {
     margin: 0 auto;
     width: 375px;
-    height: 1400px;
+    height: 1954px;
     position: relative;
     box-shadow: 0 0 5px #1e1d1d74;
     /* display: flex;
@@ -78,13 +78,33 @@ img {
 }
 
 .gry-btn {
-    margin-bottom: 75px;
+    margin-bottom: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* .nav-bar {
+.nav-bar {
     position: relative;
     width: 375px;
-} */
+}
+
+.btm-img {
+    background-image: url("https://i2.wp.com/runningonrealfood.com/wp-content/uploads/2019/04/easy-healthy-savory-vegan-breakfast-bowl-brown-rice-avocado-running-on-real-food-5-700x1049.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 305px;
+    width: 305px;
+    margin: 35px 0;
+}
+
+.top-img {
+    background-image: url("https://images.unsplash.com/photo-1494859802809-d069c3b71a8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 305px;
+    height: 171.56px;
+    margin: 35px 0;
+}
