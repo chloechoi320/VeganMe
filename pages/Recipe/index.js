@@ -7,15 +7,11 @@ import BackHeader from "../../comps/BackHeader";
 import Header from "../../comps/Header";
 import RecipeIngredients from "../../comps/RecipeIngredients";
 import RecipeInstructions from "../../comps/RecipeInstructions";
-import GBforBacktoTop from "../../comps/GBforBacktoTop";
 import NavigationBar from "../../comps/NavigationBar";
+import GBforBacktoTop from "../../comps/GBforBacktoTop";
 
 import {FaStar} from 'react-icons/fa';
 
-// function ClickAdd() {
-//     document.querySelector(".rp-favourite").getElementsByClassName.right = "-100%";
-//     Router.push("/Favourites");
-// }
 function ClickRP() {
     document.querySelector(".recipe-pg").getElementsByClassName.right = "-100%";
     Router.push("/Favourites");
@@ -28,27 +24,17 @@ function ClickFav() {
 
 
 const RecipePage = () => {
-    return <div className="recipe-pg"  onClick={ClickRP}>
+    return <div className="recipe-pg" onClick={ClickRP}>
         <BackHeader />
         <div className="rp-container">
-// <<<<<<< sophia
             <Header text="Savoury Breakfast Bowl" fontSize={14}/>
-// =======
-//             <Header text="Savoury Breakfast Bowl" fontSize={16}/>
-// >>>>>>> master
             <div className="rp-details">
                 <div>Author: Deryn Macey Prep Time: 10 min</div>
                 <div>Cook Time: 10 min Category: Recipes</div>
             </div>
-// <<<<<<< sophia
-            <img src="https://images.unsplash.com/photo-1494859802809-d069c3b71a8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
+            <div className="top-img"></div>
             <div className="rp-favourite">
                 <div className="fav-icon" onClick={ClickFav}><FaStar size="15px" color="#fff" /></div>
-// =======
-//             <img src={require('./rec1.png')}></img>
-//             <div className="rp-favourite" onClick={ClickAdd}>
-//                 <div className="fav-icon" ><FaStar size="15px" color="#fff" /></div>
-// >>>>>>> master
                 <div className="fav-text">Add to Favourites</div>
             </div>
             <div className="rp-desc">This savory vegan breakfast bowl recipe features healthy ingredients like kale, mushrooms, onions, tofu scramble, avocado, brown rice and salsa for a nutritious breakfast that doesn’t skimp on flavour. It’s high in protein and contains healthy fats and complex carbohydrates for a balanced breakfast that will leave you energized all morning. </div>
@@ -66,21 +52,13 @@ const RecipePage = () => {
             <RecipeIngredients text="1/2 cup cooked brown rice" />
             <div className="line"></div>
             <Header text="Insturctions" fontSize={14} />
-// <<<<<<< sophia
             <RecipeInstructions text="In a small dish, mix up the tofu scramble ingredients then set aside. If you’re only making one serving, I’d recommend mixing it up in a dish before cooking. If you’re making a whole package of tofu, you can add everything right into the pan as it’s easier to mix." />
             <RecipeInstructions num="2" text="Next, cook the kale, mushrooms and onions. To make them, add them to a skillet over medium-high heat with either a splash of water or 1/2 tsp olive or avocado oil. Cook for 5-8 minutes until tender and browned. Don’t stir too often in order to let them brown. Once they’re cooked, scoop into a bowl." />
             <RecipeInstructions num="3" text="In the same pan, add the tofu mixture and cook for 5 minutes until heated through and starting to brown. Alternatively, you can just add the tofu scramble mixture to the kale and mushrooms as they cook and serve it all mixed up." />
             <RecipeInstructions num="4" text="To assemble the breakfast bowls, add the tofu scramble to the bowl with the kale mixture then add brown rice, avocado and salsa. Serve right away or pack up for meal prep." />
-            <img src="https://i2.wp.com/runningonrealfood.com/wp-content/uploads/2019/04/easy-healthy-savory-vegan-breakfast-bowl-brown-rice-avocado-running-on-real-food-5-700x1049.jpg" />
-//             <div className="gry-btn" onCLick="topPage()">
-//                 <GreyButton text="Back to Top"><IoIosArrowRoundUp color="#1e1d1d" />
-//                 </GreyButton>
-// =======
-//             <RecipeInstructions />
-//             <img src={require('./rec2.png')}></img>
+            <div className="btm-img"></div>
             <div className="gry-btn">
             <GBforBacktoTop />
-// >>>>>>> master
             </div>
         </div>
         <div className="nav-bar">

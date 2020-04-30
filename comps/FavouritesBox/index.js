@@ -6,13 +6,7 @@ import { FaStar } from 'react-icons/fa'
 const FavouritesBox = ({text, img}) => 
 
 <div className="favourites_container">
-// <<<<<<< sophia
     <div style={{backgroundImage:img}}className="favourites_image"></div>
-// =======
-    <div className="favourites_image">
-//       <img src={require('../../pages/Recipe/veganburger.png')}></img>
-    </div>
-// >>>>>>> master
     <div className="favourites_icon">
         <FaStar color="#FFF" size="1.5em"/>
     </div>
