@@ -4,16 +4,11 @@ import Link from 'next/link';
 import Router from 'next/router';
 import Settings from "../../comps/Settings";
 import Header from "../../comps/Header";
-import { MdRestaurant } from 'react-icons/md';
 import {FaUserCircle} from 'react-icons/fa';
-import {IoMdApps} from 'react-icons/io';
-import {FaWineGlassAlt} from 'react-icons/fa';
-import GreyButton from '../../comps/GreyButton';
 import CategoryBox from '../../comps/CategoryBox';
 import CategoryBoxforRecipes from '../../comps/CategoryBoxforRecipes';
 import NavigationBar from '../../comps/NavigationBar';
 import GBforCategories from '../../comps/GBforCategories';
-import GBforClose from '../../comps/GBforClose';
 
 function ClickST() {
     document.querySelector("#home_settings").style.right = "-100%";
@@ -22,7 +17,7 @@ function ClickST() {
 
 function ClickGB() {
     document.querySelector("#home_greybutton").style.right = "-100%";
-    Router.push("/Categories")
+    Router.push("/Categories");
 }
 
 const Home = ({}) => {
