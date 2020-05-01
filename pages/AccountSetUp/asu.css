@@ -1,21 +1,30 @@
+body, html {
+    margin: 0;
+    overflow-x: hidden;
+}
+
 #asu_page {
     width: 375px;
     height: auto;
-    border: #000 1px solid;
+    box-shadow: 0 0 5px #1e1d1d74;
     position: relative;
     margin: 0 auto;
 }
 
 #asu_container {
-    margin: 75px 0 75px 35px;
+    margin: 0 0 0 35px;
     max-width: 300px;
 }
 
 #asu_logo {
-    width: 75px;
-    height: 75px;
-    background-color: #D2DAC3;
-    border-radius: 50px;
+    padding-top: 75px;
+}
+
+#asu_logo img {
+    box-shadow: 0 0 5px #789174;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,4 +80,49 @@
 #asu_button {
     display: flex;
     justify-content: center;
+    padding-bottom: 100px;
+    transition: 0.25s opacity;
+}
+
+/* likert */
+
+#choices_container {
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+#choices_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+.likert_choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px 0 10px;
+}
+
+#background-bar {
+    width: 175px;
+    height: 5px;
+    background-color: #EFEEEB;
+    position: relative;
+    top: -55px;
+    left: 30px;
+    z-index: 1;
+}
+
+.checkmark {
+    height: 25px;
+    width: 25px;
+    background-color: #EFEEEB;
+    border-radius: 50%;
+}
+
+.likert_choice input:checked ~ .checkmark {
+    background-color: #789174;
+    transition: 0.1s background-color;
 }

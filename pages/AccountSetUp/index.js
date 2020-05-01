@@ -5,7 +5,6 @@ import Router from 'next/router';
 import Header from "../../comps/Header";
 import CustomForm from "../../comps/CustomForm";
 import Buttons from "../../comps/Buttons";
-import NewLikert from "../../comps/NewLikert";
 
 // icons
 import { FaCarrot } from "react-icons/fa"
@@ -16,30 +15,31 @@ import { FaHeart } from "react-icons/fa"
 import { FaUser } from "react-icons/fa"
 import { FaUsers } from "react-icons/fa"
 
-// function ClickASU() {
-//     document.querySelector("#asu_page").style.right = "-100%";
-//     Router.push("/Home");
-// }
+function FinishSetUp() {
+    document.querySelector("#asu_page").style.right = "-100%";
+    Router.push("/Home");
+}
 
 var veganismType = "none";
 var veganismWhy = "none";
 var veganismStrict = "none";
 
 const AccountSetUp = ({}) => {
-    const [food_opacity, foodClicked] = useState("0.5");
-    const [product_opacity, productClicked] = useState("0.5");
+    const [food_opacity, foodClicked] = useState(0.5);
+    const [product_opacity, productClicked] = useState(0.5);
 
-    const [ethical_opacity, ethicalClicked] = useState("0.5");
-    const [environment_opacity, environmentClicked] = useState("0.5");
-    const [health_opacity, healthClicked] = useState("0.5");
+    const [ethical_opacity, ethicalClicked] = useState(0.5);
+    const [environment_opacity, environmentClicked] = useState(0.5);
+    const [health_opacity, healthClicked] = useState(0.5);
 
-    const [individual_opacity, individualClicked] = useState("0.5");
-    const [social_opacity, socialClicked] = useState("0.5");
+    const [individual_opacity, individualClicked] = useState(0.5);
+    const [social_opacity, socialClicked] = useState(0.5);
 
+    const [finish_opacity, finishClicked] = useState(0.5);
 
     return <div id="asu_page">
         <div id="asu_container">
-            <div id="asu_logo">LOGO</div>
+            <div id="asu_logo"><img src={require('./logo.png')}/></div>
 
             <Header text="Let's get started." fontSize={14}/>
             <Header text="What is your name?" fontSize={14}/>
@@ -184,12 +184,51 @@ const AccountSetUp = ({}) => {
             <div class="asu_question_container">
                 <Header text="How often do you buy or use vegan products?" fontSize={12}/>
                 <div class="display_flex">
-                    <NewLikert/>
+                <div id="radio_container">
+                    <div id="choices_container">
+
+                        <div class="likert_choice" id="likert_never">
+                            <input type="radio" id="js_likert_never" value="never" name="vegan_frequency"
+                            onClick = {() => {
+                                var likert_value = document.querySelector("#js_likert_never").value;
+                                console.log(likert_value);
+                                finishClicked(1);
+                            }}/>
+                            <span class="checkmark"></span>
+                            <Header fontSize={8} text="Never"/>
+                        </div>
+
+                        <div class="likert_choice" id="likert_sometimes">
+                            <input type="radio" id="js_likert_sometimes" value="sometimes" name="vegan_frequency"
+                                onClick = {() => {
+                                var likert_value = document.querySelector("#js_likert_sometimes").value;
+                                console.log(likert_value);
+                                finishClicked(1);
+                            }}/>
+                            <span class="checkmark"></span>
+                            <Header fontSize={8} text="Sometimes"/>
+                        </div>
+
+                        <div class="likert_choice"  id="likert_regularly">
+                            <input type="radio" id="js_likert_regularly" value="regularly" name="vegan_frequency"
+                                onClick = {() => {
+                                var likert_value = document.querySelector("#js_likert_regularly").value;
+                                console.log(likert_value);
+                                finishClicked(1);
+                            }}/>
+                            <span class="checkmark"></span>
+                            <Header fontSize={8} text="Regularly"/>
+                        </div>
+                    </div>
+                    <div id="background-bar"></div>
+                </div>
                 </div>
             </div>
 
-            <div id="asu_button">
-                <Buttons text="Finish"/>
+            <div id="asu_button" style = {{
+                    opacity: finish_opacity
+                }}>
+                <Buttons text="Finish" onClick={FinishSetUp}/>
             </div>
         </div>
     </div>
