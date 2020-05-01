@@ -1,11 +1,18 @@
 import React, {useState, useEffect} from "react";
 import "./resources.css";
+import Link from 'next/link';
+import Router from 'next/router';
 import BackHeader from "../../comps/BackHeader";
 import Header from '../../comps/Header';
 import NavigationBar from '../../comps/NavigationBar';
 
+function ClickMap() {
+    document.querySelector("#resources_page").style.right = "-100%";
+    Router.push("/Locations");
+}
+
 const Resources = ({}) => {
-    return <div id="resources_page">
+    return <div id="resources_page" onClick={ClickMap}>
             <BackHeader />
         <div id="resources_header">
             <div id="resources_icon"></div>

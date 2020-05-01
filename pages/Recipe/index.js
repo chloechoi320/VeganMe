@@ -13,7 +13,7 @@ import GBforBacktoTop from "../../comps/GBforBacktoTop";
 import {FaStar} from 'react-icons/fa';
 
 function ClickRP() {
-    document.querySelector(".recipe-pg").getElementsByClassName.right = "-100%";
+    document.querySelector(".rp-head").getElementsByClassName.right = "-100%";
     Router.push("/Favourites");
 }
 
@@ -24,10 +24,12 @@ function ClickFav() {
 
 
 const RecipePage = () => {
-    return <div className="recipe-pg" onClick={ClickRP}>
+    return <div className="recipe-pg">
         <BackHeader />
         <div className="rp-container">
-            <Header text="Savoury Breakfast Bowl" fontSize={14}/>
+            <div className="rp-head" onClick={ClickRP}>
+                <Header text="Savoury Breakfast Bowl" fontSize={14}/>
+            </div>
             <div className="rp-details">
                 <div>Author: Deryn Macey Prep Time: 10 min</div>
                 <div>Cook Time: 10 min Category: Recipes</div>

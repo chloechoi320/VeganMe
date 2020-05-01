@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+}
+
+.rest-page {
+    margin: 0 auto;
+    width: 375px;
+    /* height: 812px; */
+    height: auto;
+    position: relative;
+    box-shadow: 0 0 5px #1e1d1d74;
+    justify-content: center;
+    color: #1e1d1d;
+}
+
+.rest-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rest-header {
+    display: flex;
+    align-items: center;
+    margin: 50px 0 75px 0;
+    border-bottom: solid 1px #D2DAC3;
+    padding-bottom: 15px;
+    width: 300px;
+}
+
+.rest-icon {
+    width: 25px;
+    height: 25px;
+    background-color: #789174;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.rest-listings {
+    margin-bottom: 115px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+
+.nav-bar {
+    position: relative;
+    margin-top: 80px;
+    width: 375px;
+}
