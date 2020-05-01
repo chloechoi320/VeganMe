@@ -1,7 +1,12 @@
+body, html {
+    margin: 0;
+    overflow-x: hidden;
+}
+
 #up_page {
     width: 375px;
     height: auto;
-    border: #000 1px solid;
+    box-shadow: 0 0 5px #1e1d1d74;
     position: relative;
     margin: 0 auto;
 }
