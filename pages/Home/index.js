@@ -12,7 +12,7 @@ import GBforCategories from '../../comps/GBforCategories';
 
 function ClickST() {
     document.querySelector("#home_settings").style.right = "-100%";
-    Router.push("/Homemenu");
+    Router.push("/HomeMenu");
 }
 
 function ClickGB() {
