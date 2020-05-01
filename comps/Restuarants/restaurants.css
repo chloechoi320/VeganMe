@@ -3,6 +3,7 @@
     width: 305px;
     height: 100px;
     border-radius: 25px;
+    box-shadow: 0 0 5px #00000029;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,4 +17,8 @@
 .loc {
     font-weight: bold;
     margin-bottom: 5px;
+}
+
+.list-box:hover {
+    cursor: pointer;
 }
