@@ -12,14 +12,23 @@ import GBforBacktoTop from "../../comps/GBforBacktoTop";
 
 import {FaStar} from 'react-icons/fa';
 
+var toggleState = false; // false: not favourited > add to fave
+
 function ClickRP() {
     document.querySelector(".rp-head").getElementsByClassName.right = "-100%";
     Router.push("/Favourites");
 }
 
 function ClickFav() {
-    document.querySelector(".fav-icon").style.backgroundColor = "#e6cf25";
-    document.querySelector(".fav-text").innerHTML = "Added to Favourites";
+    if (toggleState === false) {
+        document.querySelector(".fav-icon").style.backgroundColor = "#e6cf25";
+        document.querySelector(".fav-text").innerHTML = "Added to Favourites";
+        toggleState = true;
+    } else if (toggleState === true) {
+        document.querySelector(".fav-icon").style.backgroundColor = "#e6cf2573";
+        document.querySelector(".fav-text").innerHTML = "Add to Favourites";
+        toggleState = false;
+    }
 }
 
 

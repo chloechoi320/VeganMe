@@ -1,4 +1,4 @@
-body {
+body, html {
     margin: 0;
 }
 
@@ -29,7 +29,7 @@ body {
     width: 300px;
 }
 
-.rest-icon {
+.head-icon {
     width: 25px;
     height: 25px;
     background-color: #789174;
