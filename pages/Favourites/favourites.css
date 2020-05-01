@@ -4,9 +4,10 @@ body {
 
 #favourites_page {
     margin: 0 auto;
+    margin-top: 5px;
     width: 375px;
     height: auto;
-    border: #000 1px solid;
+    box-shadow: 0 0 5px #1e1d1d74;
     position: relative;
 }
 
