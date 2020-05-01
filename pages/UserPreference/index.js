@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import "./asu.css";
+import "./userpreference.css";
 import Link from 'next/link';
 import Router from 'next/router';
 import Header from "../../comps/Header";
@@ -16,8 +16,8 @@ import { FaHeart } from "react-icons/fa"
 import { FaUser } from "react-icons/fa"
 import { FaUsers } from "react-icons/fa"
 
-// function ClickASU() {
-//     document.querySelector("#asu_page").style.right = "-100%";
+// function Clickup() {
+//     document.querySelector("#up_page").style.right = "-100%";
 //     Router.push("/Home");
 // }
 
@@ -37,23 +37,22 @@ const AccountSetUp = ({}) => {
     const [social_opacity, socialClicked] = useState("0.5");
 
 
-    return <div id="asu_page">
-        <div id="asu_container">
-            <div id="asu_logo">LOGO</div>
+    return <div id="up_page">
+        <div id="up_container">
+            <div id="up_logo">LOGO</div>
 
-            <Header text="Let's get started." fontSize={14}/>
-            <Header text="What is your name?" fontSize={14}/>
+            <Header text="Let's update your preferences." fontSize={14}/>
 
-            <div id="asu_form">
+            <div id="up_form">
                 <CustomForm/>
             </div>
 
-            <div class="asu_question_container">
+            <div class="up_question_container">
                 <Header text="What kind of veganism do you want to achieve?" fontSize={12}/>
                 <div class="display_flex">
                     <div class="selection">
 
-                        <div class="asu_circle" id="asu_food" style = {{
+                        <div class="up_circle" id="up_food" style = {{
                             opacity: food_opacity
                         }}
                         onClick={() => {
@@ -69,7 +68,7 @@ const AccountSetUp = ({}) => {
                     </div>
 
                     <div class="selection">
-                        <div class="asu_circle" id="asu_product" style = {{
+                        <div class="up_circle" id="up_product" style = {{
                             opacity: product_opacity
                         }}
                         onClick={() => {
@@ -86,12 +85,12 @@ const AccountSetUp = ({}) => {
                 </div>
             </div>
 
-            <div class="asu_question_container">
+            <div class="up_question_container">
                 <Header text="Why do you want to be vegan?" fontSize={12}/>
                 <div class="display_flex">
 
                     <div class="selection">
-                        <div class="asu_circle" id="asu_ethical" style = {{
+                        <div class="up_circle" id="up_ethical" style = {{
                             opacity: ethical_opacity
                         }}
                         onClick={() => {
@@ -108,7 +107,7 @@ const AccountSetUp = ({}) => {
                     </div>
 
                     <div class="selection">
-                        <div class="asu_circle" id="asu_environmental" style = {{
+                        <div class="up_circle" id="up_environmental" style = {{
                             opacity: environment_opacity
                         }}
                         onClick={() => {
@@ -125,7 +124,7 @@ const AccountSetUp = ({}) => {
                     </div>
 
                     <div class="selection">
-                        <div class="asu_circle" id="asu_health" style = {{
+                        <div class="up_circle" id="up_health" style = {{
                             opacity: health_opacity
                         }}
                         onClick={() => {
@@ -143,12 +142,12 @@ const AccountSetUp = ({}) => {
                 </div>
             </div>
 
-            <div class="asu_question_container">
+            <div class="up_question_container">
                 <Header text="How strict will you be?" fontSize={12}/>
                 <div class="display_flex">
                     <div class="selection">
 
-                        <div class="asu_circle" id="asu_individual" style = {{
+                        <div class="up_circle" id="up_individual" style = {{
                             opacity: individual_opacity
                         }}
                         onClick={() => {
@@ -164,7 +163,7 @@ const AccountSetUp = ({}) => {
                     </div>
 
                     <div class="selection">
-                        <div class="asu_circle" id="asu_social" style = {{
+                        <div class="up_circle" id="up_social" style = {{
                             opacity: social_opacity
                         }}
                         onClick={() => {
@@ -181,14 +180,14 @@ const AccountSetUp = ({}) => {
                 </div>
             </div>
 
-            <div class="asu_question_container">
+            <div class="up_question_container">
                 <Header text="How often do you buy or use vegan products?" fontSize={12}/>
                 <div class="display_flex">
                     <NewLikert/>
                 </div>
             </div>
 
-            <div id="asu_button">
+            <div id="up_button">
                 <Buttons text="Finish"/>
             </div>
         </div>

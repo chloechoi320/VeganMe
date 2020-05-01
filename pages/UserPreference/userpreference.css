@@ -1,4 +1,4 @@
-#asu_page {
+#up_page {
     width: 375px;
     height: auto;
     border: #000 1px solid;
@@ -6,12 +6,12 @@
     margin: 0 auto;
 }
 
-#asu_container {
+#up_container {
     margin: 75px 0 75px 35px;
     max-width: 300px;
 }
 
-#asu_logo {
+#up_logo {
     width: 75px;
     height: 75px;
     background-color: #D2DAC3;
@@ -21,11 +21,11 @@
     justify-content: center;
 }
 
-#asu_form {
+#up_form {
     margin: 25px 0 50px 0;
 }
 
-.asu_question_container {
+.up_question_container {
     margin-bottom: 50px;
 }
 
@@ -42,33 +42,32 @@
     align-items: center;
 }
 
-.asu_circle {
+.up_circle {
     width: 70px;
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50px;
-    transition: 0.25s opacity;
 }
 
-#asu_food, #asu_social {
+#up_food, #up_social {
     background-color: #ED8733;
 }
 
-#asu_product, #asu_ethical, #asu_individual {
+#up_product, #up_ethical, #up_individual {
     background-color: #789174;
 }
 
-#asu_environmental {
+#up_environmental {
     background-color: #476140;
 }
 
-#asu_health {
+#up_health {
     background-color: #B55139;
 }
 
-#asu_button {
+#up_button {
     display: flex;
     justify-content: center;
 }
