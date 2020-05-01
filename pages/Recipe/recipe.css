@@ -73,16 +73,15 @@ body, html {
 }
 
 .gry-btn {
-    margin-bottom: 70px;
+    margin-bottom: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .nav-bar {
-    position: relative;
-    width: 375px;
-    margin-top: 80px;
+    position: absolute;
+    bottom: 0;
 }
 
 .btm-img {
