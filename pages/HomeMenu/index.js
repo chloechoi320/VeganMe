@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from "./node_modules/react";
+import React, {useState, useEffect} from "react";
 import "./homemenu.css";
-import Link from './node_modules/next/link';
-import Router from './node_modules/next/router';
+import Link from 'next/link';
+import Router from 'next/router';
 import Home from '../Home';
 import HamburgerMenu from '../../comps/HamburgerMenu';
 
@@ -11,7 +11,7 @@ function ClickHCS() {
     Router.push("/Home");
 }
 
-const Homemenu = ({}) => {
+const HomeMenu = ({}) => {
 
     return <div id="homec">
     <div id="homec_page">
@@ -23,8 +23,8 @@ const Homemenu = ({}) => {
     </div>
 }
 
-Homemenu.defaultProps = {
+HomeMenu.defaultProps = {
 
 }
 
-export default Homemenu;
+export default HomeMenu;
