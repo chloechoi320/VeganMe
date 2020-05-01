@@ -49,7 +49,6 @@ body, html {
 }
 
 .nav-bar {
-    position: relative;
-    margin-top: 80px;
-    width: 375px;
+    position: absolute;
+    bottom: 0;
 }

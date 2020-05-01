@@ -45,3 +45,9 @@ body, html {
     text-decoration: none;
     color: #789174;
 }
+
+.nav-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
