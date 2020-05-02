@@ -10,7 +10,7 @@ function ClickFavourites() {
 
 function ClickUP() {
     document.querySelector(".hm-container").style.right = "-100%";
-    Router.push("/userpreference");
+    Router.push("/UserPreference");
 }
 
 const HamburgerMenu = () => <div className="hm-container">
