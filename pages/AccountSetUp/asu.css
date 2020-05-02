@@ -110,6 +110,7 @@ body, html {
     height: 5px;
     background-color: #EFEEEB;
     position: relative;
+    top: -55px;
     left: 30px;
     z-index: 1;
 }

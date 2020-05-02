@@ -37,6 +37,7 @@ body, html {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    padding-bottom: 50px;
 }
 
 .nav-bar {
