@@ -14,11 +14,6 @@ function ClickClose() {
     Router.push("/Home");
 }
 
-function ClickR() {
-    document.querySelector("#homecd_categoriesdropdown").style.right = "-100%";
-    Router.push("/Recipe")
-}
-
 const Categories = ({}) => {
     return <div id="homecd_page">
     <div className="homecd_head">
@@ -32,7 +27,7 @@ const Categories = ({}) => {
     <div id="homecd_greybutton" onClick={ClickClose}>
     <GBforClose />
     </div>
-    <div id="homecd_categoriesdropdown" onClick={ClickR}>
+    <div id="homecd_categoriesdropdown">
     <CategoriesDropdown />
     </div>
     <div id="homecd_navigationbar">
