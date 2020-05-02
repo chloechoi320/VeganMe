@@ -10,18 +10,14 @@ html, body {
 }
 
 .container {
+    height: 55px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     background-color: #EFEEEB;
 }
 
-.container img {
-    height: 30px;
-    margin: 10px;
-}
-
-
-#map, #home, #resources {
+#map, #home, #star, #gear {
     cursor: pointer;
 }
