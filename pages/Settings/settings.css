@@ -3,7 +3,7 @@ body, html {
     overflow-x: hidden;
 }
 
-#resources_page {
+#settings_page {
     margin: 0 auto;
     width: 375px;
     height: 910px;
@@ -11,17 +11,16 @@ body, html {
     position: relative;
 }
 
-#resources_header {
+#settings_header {
     display: flex;
     align-items: center;
-    margin: 50px 0 70px 40px;
-    padding-bottom: 15px;
-    border-bottom: solid 1px #D2DAC3;
+    margin: 0 0 0 40px;
+    padding: 35px 0 15px 0;
     left: 50%;
     width: 300px;
 }
 
-#resources_icon {
+#settings_icon {
     width: 25px;
     height: 25px;
     background-color: #789174;
@@ -36,11 +35,17 @@ ul {
     list-style-type: none;
 }
 
-ul li {
-    padding-bottom: 30px;
-    font-weight: bold;
+li {
+    cursor: pointer;
 }
 
-#resources_list {
-    margin-bottom: 20px;
+ul li {
+    padding: 15px 0 15px 0;
+    font-weight: bold;
+    border-top: 1px #D2DAC3 solid;
+    margin-right: 35px;
+}
+
+#border-bottom {
+    border-bottom: 1px #D2DAC3 solid;
 }
