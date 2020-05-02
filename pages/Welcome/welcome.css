@@ -44,4 +44,5 @@ body, html {
     margin-top: 15px;
     color: #789174;
     font-weight: bold;
+    cursor: pointer;
 }

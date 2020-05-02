@@ -23,8 +23,8 @@ body, html {
 #asu_logo img {
     box-shadow: 0 0 5px #789174;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     display: flex;
     align-items: center;
     justify-content: center;

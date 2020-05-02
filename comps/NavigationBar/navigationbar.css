@@ -20,3 +20,8 @@ html, body {
     height: 30px;
     margin: 10px;
 }
+
+
+#map, #home, #resources {
+    cursor: pointer;
+}

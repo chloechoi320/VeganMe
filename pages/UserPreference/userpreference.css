@@ -17,10 +17,14 @@ body, html {
 }
 
 #up_logo {
+    padding-top: 75px;
+}
+
+#up_logo img {
+    box-shadow: 0 0 5px #789174;
+    border-radius: 50%;
     width: 75px;
     height: 75px;
-    background-color: #D2DAC3;
-    border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,4 +79,5 @@ body, html {
 #up_button {
     display: flex;
     justify-content: center;
+    padding-bottom: 100px;
 }
