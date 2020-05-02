@@ -5,7 +5,7 @@ import Router from 'next/router';
 
 function ClickMap() {
     document.querySelector("#map").style.right = "-100%";
-    Router.push("/locations");
+    Router.push("/Locations");
 }
 
 function ClickHome() {
