@@ -83,6 +83,7 @@ body, html {
 .nav-bar {
     position: absolute;
     bottom: 0;
+    width: 100%;
 }
 
 .btm-img {

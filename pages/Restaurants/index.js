@@ -10,7 +10,7 @@ import NavigationBar from "../../comps/NavigationBar";
 import {FaWineGlassAlt} from 'react-icons/fa';
 
 function ClickRest() {
-    document.querySelector("#vph").style.right = "-100%";
+    document.querySelector(".rest-listings").style.right = "-100%";
     Router.push("/VeganPizzaHouse");
 }
 
@@ -23,9 +23,7 @@ const RestaurantsPage = ({}) => {
                 <Header text="Restaurants" fontSize={12}/>
             </div>
             <div className="rest-listings">
-                <div id="vph" onClick={ClickRest}>
-                    <Restaurants name="Vegan Pizza House" />
-                </div>
+                <Restaurants name="Vegan Pizza House" onClick={ClickRest} />
                 <Restaurants name ="Chickpea Restaurant" />
                 <Restaurants name ="Vegan Cave Cafe" />
                 <Restaurants name ="Dharma Kitchen" />

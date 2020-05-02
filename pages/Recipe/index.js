@@ -14,11 +14,6 @@ import {FaStar} from 'react-icons/fa';
 
 var toggleState = false; // false: not favourited > add to fave
 
-function ClickRP() {
-    document.querySelector(".rp-head").getElementsByClassName.right = "-100%";
-    Router.push("/Favourites");
-}
-
 function ClickFav() {
     if (toggleState === false) {
         document.querySelector(".fav-icon").style.backgroundColor = "#e6cf25";
@@ -36,7 +31,7 @@ const RecipePage = () => {
     return <div className="recipe-pg">
         <BackHeader />
         <div className="rp-container">
-            <div className="rp-head" onClick={ClickRP}>
+            <div className="rp-head">
                 <Header text="Savoury Breakfast Bowl" fontSize={14}/>
             </div>
             <div className="rp-details">

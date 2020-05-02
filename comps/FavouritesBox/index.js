@@ -3,9 +3,11 @@ import Header from '../Header'
 import './favouritesbox.css';
 import { FaStar } from 'react-icons/fa'
 
-const FavouritesBox = ({text, img}) => 
+const FavouritesBox = ({text, img, onClick}) => 
 
-<div className="favourites_container">
+<div className="favourites_container"
+onClick={onClick}
+>
     <div style={{backgroundImage:img}}className="favourites_image"></div>
     <div className="favourites_icon">
         <FaStar color="#FFF" size="1.5em"/>

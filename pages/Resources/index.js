@@ -6,6 +6,8 @@ import BackHeader from "../../comps/BackHeader";
 import Header from '../../comps/Header';
 import NavigationBar from '../../comps/NavigationBar';
 
+import {MdLocalGroceryStore} from 'react-icons/md';
+
 function ClickMap() {
     document.querySelector("#resources_page").style.right = "-100%";
     Router.push("/Locations");
@@ -15,8 +17,8 @@ const Resources = ({}) => {
     return <div id="resources_page" onClick={ClickMap}>
             <BackHeader />
         <div id="resources_header">
-            <div id="resources_icon"></div>
-            <Header fontSize={12}/>
+            <div id="resources_icon"><MdLocalGroceryStore size="0.75em" color="#FFF" /></div>
+            <Header text="Groceries" fontSize={12}/>
         </div>
         <div id="resources_list>">
             <ul>

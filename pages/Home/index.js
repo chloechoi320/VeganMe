@@ -12,12 +12,17 @@ import GBforCategories from '../../comps/GBforCategories';
 
 function ClickST() {
     document.querySelector("#home_settings").style.right = "-100%";
-    Router.push("/HomeMenu");
+    Router.push("/Homemenu");
 }
 
 function ClickGB() {
     document.querySelector("#home_greybutton").style.right = "-100%";
     Router.push("/Categories");
+}
+
+function ClickRecipe() {
+    document.querySelector("#home_categorybox1").style.right = "-100%";
+    Router.push("/Recipe");
 }
 
 const Home = ({}) => {
@@ -36,7 +41,7 @@ const Home = ({}) => {
     <div id="home_greybutton" onClick={ClickGB}>
     <GBforCategories />
     </div>
-    <div id="home_categorybox1">
+    <div id="home_categorybox1" onClick={ClickRecipe}>
         <CategoryBox description="This savory vegan breakfast bowl recipe features healthy…"/>
     </div>
     <div id="home_categorybox2">

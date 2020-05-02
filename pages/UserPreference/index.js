@@ -16,10 +16,10 @@ import { FaHeart } from "react-icons/fa"
 import { FaUser } from "react-icons/fa"
 import { FaUsers } from "react-icons/fa"
 
-// function Clickup() {
-//     document.querySelector("#up_page").style.right = "-100%";
-//     Router.push("/Home");
-// }
+function Clickup() {
+    document.querySelector("#up_page").style.right = "-100%";
+    Router.push("/Home");
+}
 
 var veganismType = "none";
 var veganismWhy = "none";
@@ -39,7 +39,7 @@ const AccountSetUp = ({}) => {
 
     return <div id="up_page">
         <div id="up_container">
-            <div id="up_logo">LOGO</div>
+            <div id="up_logo"><img src={require('./logo.png')}/></div>
 
             <Header text="Let's update your preferences." fontSize={14}/>
 
@@ -187,7 +187,7 @@ const AccountSetUp = ({}) => {
                 </div>
             </div>
 
-            <div id="up_button">
+            <div id="up_button" onClick={Clickup}>
                 <Buttons text="Finish"/>
             </div>
         </div>

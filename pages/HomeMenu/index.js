@@ -7,17 +7,17 @@ import HamburgerMenu from '../../comps/HamburgerMenu';
 
 
 function ClickHCS() {
-    document.querySelector("#homec_hamburgermenu").style.right = "-100%";
+    document.querySelector("#homec").style.right = "-100%";
     Router.push("/Home");
 }
 
 const HomeMenu = ({}) => {
 
     return <div id="homec">
-    <div id="homec_page">
+    <div id="homec_page" onClick={ClickHCS}>
         <Home />
     </div>
-    <div id="homec_hamburgermenu" onClick={ClickHCS}>
+    <div id="homec_hamburgermenu">
         <HamburgerMenu />
     </div>
     </div>
