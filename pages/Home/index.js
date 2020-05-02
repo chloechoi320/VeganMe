@@ -2,18 +2,12 @@ import React, {useState, useEffect} from "react";
 import "./home.css";
 import Link from 'next/link';
 import Router from 'next/router';
-import Settings from "../../comps/Settings";
 import Header from "../../comps/Header";
 import {FaUserCircle} from 'react-icons/fa';
 import CategoryBox from '../../comps/CategoryBox';
 import CategoryBoxforRecipes from '../../comps/CategoryBoxforRecipes';
 import NavigationBar from '../../comps/NavigationBar';
 import GBforCategories from '../../comps/GBforCategories';
-
-function ClickST() {
-    document.querySelector("#home_settings").style.right = "-100%";
-    Router.push("/Homemenu");
-}
 
 function ClickGB() {
     document.querySelector("#home_greybutton").style.right = "-100%";
@@ -25,11 +19,13 @@ function ClickRecipe() {
     Router.push("/Recipe");
 }
 
+function ClickRestaurant() {
+    document.querySelector("#home_categorybox1").style.right = "-100%";
+    Router.push("/Restaurants");
+}
+
 const Home = ({}) => {
     return <div id="home_page">
-    <div id="home_settings" onClick={ClickST}>
-        <Settings />
-    </div>
     <div className="head">
     <div id="home_user">
         <FaUserCircle size="4.5em" color="#789174"/>
@@ -44,7 +40,7 @@ const Home = ({}) => {
     <div id="home_categorybox1" onClick={ClickRecipe}>
         <CategoryBox description="This savory vegan breakfast bowl recipe features healthy…"/>
     </div>
-    <div id="home_categorybox2">
+    <div id="home_categorybox2" onClick={ClickRestaurant}>
         <CategoryBoxforRecipes description="Innovative vegan & vegetarian dishes are the draw at this…"/>
     </div>
     <div id="home_more">

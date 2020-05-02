@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import "./categories.css";
 import Link from 'next/link';
 import Router from 'next/router';
-import Settings from "../../comps/Settings";
 import Header from "../../comps/Header";
 import {FaUserCircle} from 'react-icons/fa';
 import GBforClose from '../../comps/GBforClose';
@@ -15,11 +14,6 @@ function ClickClose() {
     Router.push("/Home");
 }
 
-function ClickH() {
-    document.querySelector("#homecd_settings").style.right = "-100%";
-    Router.push("/Homemenu");
-}
-
 function ClickR() {
     document.querySelector("#homecd_categoriesdropdown").style.right = "-100%";
     Router.push("/Recipe")
@@ -27,9 +21,6 @@ function ClickR() {
 
 const Categories = ({}) => {
     return <div id="homecd_page">
-    <div id="homecd_settings" onClick={ClickH}>
-        <Settings />
-    </div>
     <div className="homecd_head">
     <div id="homecd_user">
         <FaUserCircle size="4.5em" color="#789174"/>
