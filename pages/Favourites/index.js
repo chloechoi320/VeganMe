@@ -16,7 +16,6 @@ function ClickTitle() {
 
 const FavouritesPage = ({}) => {
     return <div id="favourites_page">
-        <BackHeader/>
         <div id="favourites_header">
             <div id="favourite-star-icon"><FaStar size="0.75em" color="#FFF"/></div>
             <Header text="Favourites" fontSize={12}/>

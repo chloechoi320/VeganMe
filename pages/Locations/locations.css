@@ -6,7 +6,7 @@ body, html {
 .locations-page {
     margin: 0 auto;
     width: 375px;
-    height: 812px;
+    height: 100vh;
     position: relative;
     box-shadow: 0 0 5px #1e1d1d74;
     justify-content: center;
@@ -68,16 +68,4 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* .nav-bar {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-} */
-
-.nav-bar {
-    position: fixed;
-    top: 790px;
-    width: 375px;
 }

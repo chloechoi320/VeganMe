@@ -16,7 +16,6 @@ function ClickCat() {
 
 const LocationsPage = ({}) => {
     return <div className="locations-page">
-        <BackHeader/>
         <div className="locations-container">
             <div className="locations-header">
                 <div className="locations-icon"><MdLocationOn size="0.75em" color="#FFF"/></div>

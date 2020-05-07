@@ -6,10 +6,9 @@ body, html {
 #homecd_page {
     margin: 0 auto;
     width: 375px;
-    height: 820px;
+    height: 100vh;
     box-shadow: 0 0 5px #1e1d1d74;
     /* border: #000 1px solid; */
-    padding-top: 35px;
     position: relative;
 }
 
@@ -17,6 +16,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 35px;
     margin-bottom: 80px;
 }
 
@@ -48,10 +48,4 @@ body, html {
     align-items: center;
     justify-content: center;
     margin-top: 60px;
-}
-
-#homecd_navigationbar {
-    position: fixed;
-    top: 790px;
-    width: 375px;
 }

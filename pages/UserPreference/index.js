@@ -3,6 +3,7 @@ import "./userpreference.css";
 import Link from 'next/link';
 import Router from 'next/router';
 import Header from "../../comps/Header";
+import BackHeader from "../../comps/BackHeader";
 import CustomForm from "../../comps/CustomForm";
 import Buttons from "../../comps/Buttons";
 
@@ -38,6 +39,7 @@ const UserPreference = ({}) => {
     const [finish_opacity, finishClicked] = useState(0.5);
 
     return <div id="up_page">
+        <BackHeader/>
         <div id="up_container">
             <div id="up_logo"><img src={require('./logo.png')}/></div>
 

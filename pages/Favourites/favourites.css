@@ -6,7 +6,7 @@ body, html {
 #favourites_page {
     margin: 0 auto;
     width: 375px;
-    height: auto;
+    height: 100vh;
     box-shadow: 0 0 5px #1e1d1d74;
     position: relative;
 }
@@ -14,10 +14,9 @@ body, html {
 #favourites_header {
     display: flex;
     align-items: center;
-    margin: 50px 0 100px 40px;
+    padding: 50px 0 15px 40px;
     border-bottom: solid 1px #D2DAC3;
-    padding-bottom: 15px;
-    width: 300px;
+    width: 350;
 }
 
 #favourite-star-icon {
@@ -37,17 +36,5 @@ body, html {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    padding-bottom: 50px;
-}
-
-/* .nav-bar {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-} */
-
-.nav-bar {
-    position: fixed;
-    top: 790px;
-    width: 375px;
+    padding: 50px 0;
 }
