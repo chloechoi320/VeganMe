@@ -4,9 +4,9 @@ html, body {
 
 .bar {
     display: block;
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 375px;
 }
 
 .container {

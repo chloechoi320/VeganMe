@@ -14,6 +14,7 @@ body, html {
     align-items: center;
     justify-content: center;
     color: #1e1d1d;
+    padding-top: 35px;
 }
 
 .rp-container {
@@ -88,7 +89,7 @@ body, html {
 
 .nav-bar {
     position: fixed;
-    top: 790px;
+    bottom: 0;
     width: 375px;
 }
 

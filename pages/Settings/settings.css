@@ -6,7 +6,7 @@ body, html {
 #settings_page {
     margin: 0 auto;
     width: 375px;
-    height: 910px;
+    height: 100vh;
     box-shadow: 0 0 5px #1e1d1d74;
     position: relative;
 }
@@ -48,10 +48,4 @@ ul li {
 
 #border-bottom {
     border-bottom: 1px #D2DAC3 solid;
-}
-
-#settings_navigationbar {
-    position: fixed;
-    top: 790px;
-    width: 375px;
 }
