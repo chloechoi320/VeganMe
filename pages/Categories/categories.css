@@ -49,3 +49,9 @@ body, html {
     justify-content: center;
     margin-top: 60px;
 }
+
+#homecd_navigationbar {
+    position: fixed;
+    top: 790px;
+    width: 375px;
+}
