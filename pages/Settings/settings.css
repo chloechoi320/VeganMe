@@ -49,3 +49,9 @@ ul li {
 #border-bottom {
     border-bottom: 1px #D2DAC3 solid;
 }
+
+#settings_navigationbar {
+    position: fixed;
+    top: 790px;
+    width: 375px;
+}

@@ -57,7 +57,7 @@ const RecipePage = () => {
             <RecipeIngredients text="salsa" />
             <RecipeIngredients text="1/2 cup cooked brown rice" />
             <div className="line"></div>
-            <Header text="Insturctions" fontSize={14} />
+            <Header text="Instructions" fontSize={14} />
             <RecipeInstructions text="In a small dish, mix up the tofu scramble ingredients then set aside. If you’re only making one serving, I’d recommend mixing it up in a dish before cooking. If you’re making a whole package of tofu, you can add everything right into the pan as it’s easier to mix." />
             <RecipeInstructions num="2" text="Next, cook the kale, mushrooms and onions. To make them, add them to a skillet over medium-high heat with either a splash of water or 1/2 tsp olive or avocado oil. Cook for 5-8 minutes until tender and browned. Don’t stir too often in order to let them brown. Once they’re cooked, scoop into a bowl." />
             <RecipeInstructions num="3" text="In the same pan, add the tofu mixture and cook for 5 minutes until heated through and starting to brown. Alternatively, you can just add the tofu scramble mixture to the kale and mushrooms as they cook and serve it all mixed up." />

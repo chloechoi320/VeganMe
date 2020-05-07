@@ -47,8 +47,14 @@ body, html {
     color: #789174;
 }
 
-.nav-bar {
+/* .nav-bar {
     position: absolute;
     bottom: 0;
     width: 100%;
+} */
+
+.nav-bar {
+    position: fixed;
+    top: 790px;
+    width: 375px;
 }

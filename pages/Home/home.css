@@ -73,3 +73,9 @@ body, html {
     justify-content: center;
     margin-top: 70px;
 }
+
+#home_navigationbar {
+    position: fixed;
+    top: 790px;
+    width: 375px;
+}
