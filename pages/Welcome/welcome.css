@@ -5,9 +5,10 @@ body, html {
 
 .welcome-pg {
     margin: 0 auto;
-    margin-top: 5px; /* to show the top area of border*/
-    width: 375px;
-    height: 812px;
+    /* margin-top: 5px; to show the top area of border*/
+    /* width: 375px; */
+    width: 100%;
+    height: 100vh;
     box-shadow: 0 0 5px #1e1d1d74;
     position: relative;
     display: flex;

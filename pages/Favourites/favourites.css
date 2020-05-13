@@ -5,18 +5,23 @@ body, html {
 
 #favourites_page {
     margin: 0 auto;
-    width: 375px;
+    /* width: 375px; */
+    width: 100%;
     height: 100vh;
     box-shadow: 0 0 5px #1e1d1d74;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #favourites_header {
     display: flex;
     align-items: center;
-    padding: 50px 0 15px 40px;
+    margin: 50px 0 75px 0;
     border-bottom: solid 1px #D2DAC3;
-    width: 350;
+    padding-bottom: 15px;
+    width: 300px;
 }
 
 #favourite-star-icon {

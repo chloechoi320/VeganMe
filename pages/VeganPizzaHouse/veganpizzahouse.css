@@ -4,7 +4,8 @@ body, html {
 
 .vph-pg {
     margin: 0 auto;
-    width: 375px;
+    /* width: 375px; */
+    width: 100%;
     height: 100vh;
     position: relative;
     box-shadow: 0 0 5px #1e1d1d74;
