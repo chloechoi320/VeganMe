@@ -22,68 +22,96 @@ function ClickRestaurant() {
 
 const Home = ({}) => {
     console.log(data);
-        return <div>
-            <div className="home_page">
-            <div className="head">
-                <div className="home_user">
-                    <FaUserCircle size="4.5em" color="#789174"/>
-                </div>
-                <div className="home_header">
-                    <Header text="Good Afternoon!" fontSize={14}/>
-                </div>
-            </div>
-                <div className="home_categorybox1" onClick={ClickRestaurant}>
-                    <CategoryBox defaultText="Stores" description="Find the freshest ingredients you can."/>
-                </div>
-                <div className="home_categorybox2" onClick={ClickRecipe}>
-                    <CategoryBoxforRecipes description="Popular and easy-to-make recipes!"/>
-                </div>
-            </div>
-                <NavigationBar />
-            </div>
+    switch (data.veganismType) {
+        case "food":
+            if (data.veganismMakeOrDIY == "premade") {
+            return <div>
+                    FOOD AND PREMADE
+                    <div className="home_page">
+                    <div className="head">
+                        <div className="home_user">
+                            <FaUserCircle size="4.5em" color="#789174"/>
+                        </div>
+                        <div className="home_header">
+                            <Header text="Good Afternoon!" fontSize={14}/>
+                        </div>
+                    </div>
+                        <div className="home_categorybox1" onClick={ClickRestaurant}>
+                            <CategoryBox defaultText="Restaurants" description="Find local restaurants to satisfy your cravings."/>
+                        </div>
+                    </div>
+                        <NavigationBar />
+                    </div>
+            } else if (data.veganismMakeOrDIY == "diy") {
+                return <div>
+                    FOOD AND DIY
+                    <div className="home_page">
+                    <div className="head">
+                        <div className="home_user">
+                            <FaUserCircle size="4.5em" color="#789174"/>
+                        </div>
+                        <div className="home_header">
+                            <Header text="Good Afternoon!" fontSize={14}/>
+                        </div>
+                    </div>
+                        <div className="home_categorybox1" onClick={ClickRestaurant}>
+                            <CategoryBox defaultText="Stores" description="Find the freshest ingredients you can."/>
+                        </div>
+                        <div className="home_categorybox2" onClick={ClickRecipe}>
+                            <CategoryBoxforRecipes description="Popular and easy-to-make recipes!"/>
+                        </div>
+                    </div>
+                        <NavigationBar />
+                    </div>
+            }
+            break;
 
-    // } else if (data.veganismType == "food" && veganismMakeOrDIY == "premade") {
-    //     return <div>
-    //     <div className="home_page">
-    //     <div className="head">
-    //         <div className="home_user">
-    //             <FaUserCircle size="4.5em" color="#789174"/>
-    //         </div>
-    //         <div className="home_header">
-    //             <Header text="Good Afternoon!" fontSize={14}/>
-    //         </div>
-    //     </div>
-    //         <div className="home_categorybox1" onClick={ClickRestaurant}>
-    //             <CategoryBox description="Find local vegan restaurants to satisfy your cravings."/>
-    //         </div>
-    //         <div className="home_categorybox2" onClick={ClickRecipe}>
-    //             <CategoryBoxforRecipes description="Popular and easy-to-make recipes!"/>
-    //         </div>
-    //     </div>
-    //         <NavigationBar />
-    //     </div>
+        case "product":
+            if (data.veganismMakeOrDIY == "premade") {
+                return <div>
+                        PRODUCT AND PREMADE
+                        <div className="home_page">
+                        <div className="head">
+                            <div className="home_user">
+                                <FaUserCircle size="4.5em" color="#789174"/>
+                            </div>
+                            <div className="home_header">
+                                <Header text="Good Afternoon!" fontSize={14}/>
+                            </div>
+                        </div>
+                            <div className="home_categorybox1" onClick={ClickRestaurant}>
+                                <CategoryBox defaultText="Stores" description="Find stores that sell vegan products and household items."/>
+                            </div>
+                        </div>
+                            <NavigationBar />
+                        </div>
+                } else if (data.veganismMakeOrDIY == "diy") {
+                    return <div>
+                        FOOD AND DIY
+                        <div className="home_page">
+                        <div className="head">
+                            <div className="home_user">
+                                <FaUserCircle size="4.5em" color="#789174"/>
+                            </div>
+                            <div className="home_header">
+                                <Header text="Good Afternoon!" fontSize={14}/>
+                            </div>
+                        </div>
+                            <div className="home_categorybox1" onClick={ClickRestaurant}>
+                                <CategoryBox defaultText="Stores" description="Find the supplies and tools you need to create things."/>
+                            </div>
+                            <div className="home_categorybox2" onClick={ClickRecipe}>
+                                <CategoryBoxforRecipes defaultText="How Tos & DIYs" description="Learn how to create your own items, using only vegan products!"/>
+                            </div>
+                        </div>
+                            <NavigationBar />
+                        </div>
+                }
+                break;
 
-//     } else if (data.veganismType == "product") {
-//         return <div>
-//         <div className="home_page">
-//         <div className="head">
-//             <div className="home_user">
-//                 <FaUserCircle size="4.5em" color="#789174"/>
-//             </div>
-//             <div className="home_header">
-//                 <Header text="Good Afternoon!" fontSize={14}/>
-//             </div>
-//         </div>
-//             <div className="home_categorybox1" onClick={ClickRestaurant}>
-//                 <CategoryBox description="PRODUCT"/>
-//             </div>
-//             <div className="home_categorybox2" onClick={ClickRecipe}>
-//                 <CategoryBoxforRecipes description="Popular and easy-to-make recipes!"/>
-//             </div>
-//         </div>
-//             <NavigationBar />
-//         </div>
-//     }
+        default:
+            return <div>Oops... there was a mistake.</div>
+    }
 }
 
 Home.defaultProps = {
