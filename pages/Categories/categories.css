@@ -5,11 +5,15 @@ body, html {
 
 #homecd_page {
     margin: 0 auto;
-    width: 375px;
+    /* width: 375px; */
+    width: 100%;
     height: 100vh;
     box-shadow: 0 0 5px #1e1d1d74;
     /* border: #000 1px solid; */
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .homecd_head {

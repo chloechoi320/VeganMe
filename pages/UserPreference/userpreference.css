@@ -4,12 +4,16 @@ body, html {
 }
 
 #up_page {
-    width: 375px;
+    /* width: 375px; */
+    width: 100%;
     height: auto;
     box-shadow: 0 0 5px #1e1d1d74;
     position: relative;
     margin: 0 auto;
     padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #up_container {
