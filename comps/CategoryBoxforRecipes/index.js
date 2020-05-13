@@ -4,10 +4,10 @@ import './categoryboxforrecipes.css';
 import {FaListUl} from 'react-icons/fa';
 
 
-const CategoryBoxforRecipes = ({headerText, defaultText, description}) => 
+const CategoryBoxforRecipes = ({headerText, defaultText, img, description}) => 
 
 <div className="category_container">
-    <div className="category_image"><img src={require('../../pages/Recipe/veganburger.png')}></img></div>
+    <div style={{backgroundImage:img}} className="category_image"></div>
     <div className="category_header_container">
     <div className="category_icon">
             <FaListUl color="#FFF" size="1em"/>
@@ -21,7 +21,8 @@ const CategoryBoxforRecipes = ({headerText, defaultText, description}) =>
 
 CategoryBoxforRecipes.defaultProps = {
     defaultText: "Recipes", // recipe / DIY
-    description: "A delicious breakfast bowl!"
+    description: "A delicious breakfast bowl!",
+    img: 'url("https://images.unsplash.com/photo-1494859802809-d069c3b71a8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")'
 };
 
 export default CategoryBoxforRecipes;
