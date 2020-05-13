@@ -51,9 +51,8 @@ const AccountSetUp = ({}) => {
                                 productClicked(0.5);
                         }
                             foodClicked(1);
-                            changeData({
-                                veganismType: "food"
-                            })
+                            data.veganismType = "food";
+                            changeData(data);
                             console.log("Veganism type = " + data.veganismType);
                         }}>
                             <FaCarrot color="#FFF" size="2em"/>
@@ -70,9 +69,8 @@ const AccountSetUp = ({}) => {
                                 foodClicked(0.5);
                             }
                             productClicked(1);
-                            changeData({
-                                veganismType: "product"
-                        })
+                            data.veganismType = "product";
+                            changeData(data);
                             console.log("Veganism type = " + data.veganismType);
                         }}>
                             <FaTshirt color="#FFF" size="2em"/>
@@ -95,9 +93,8 @@ const AccountSetUp = ({}) => {
                                 diyClicked(0.5);
                         }
                             premadeClicked(1);
-                            changeData({
-                                veganismMakeOrDIY: "premade"
-                        })
+                            data.veganismMakeOrDIY = "premade";
+                            changeData(data);
                             console.log("Veganism Make/DIY = " + data.veganismMakeOrDIY);
                         }}>
                             <FaGift color="#FFF" size="2em"/>
@@ -114,9 +111,8 @@ const AccountSetUp = ({}) => {
                                 premadeClicked(0.5);
                         }
                             diyClicked(1);
-                            changeData({
-                                veganismMakeOrDIY: "diy"
-                        })
+                            data.veganismMakeOrDIY = "diy";
+                            changeData(data);
                         console.log("Veganism Make/DIY = " + data.veganismMakeOrDIY);
                         }}>
                             <FaHammer color="#FFF" size="2em"/>
@@ -137,9 +133,8 @@ const AccountSetUp = ({}) => {
                         }}
                         onClick={() => {
                             vancouverClicked(1);
-                            changeData({
-                                veganismLocation: "vancouver"
-                        })
+                            data.veganismLocation = "vancouver";
+                            changeData(data);
                         console.log("Veganism location = " + data.veganismLocation);
                             if (data.veganismLocation == "burnaby" || "richmond") {
                                 burnabyClicked(0.5);
@@ -157,9 +152,8 @@ const AccountSetUp = ({}) => {
                         }}
                         onClick={() => {
                             burnabyClicked(1);
-                            changeData({
-                                veganismLocation: "burnaby"
-                        })
+                            data.veganismLocation = "burnaby";
+                            changeData(data);
                         console.log("Veganism location = " + data.veganismLocation);
                             if (data.veganismLocation == "vancouver" || "richmond") {
                                 vancouverClicked(0.5);
@@ -177,9 +171,8 @@ const AccountSetUp = ({}) => {
                         }}
                         onClick={() => {
                             richmondClicked(1);
-                            changeData({
-                                veganismLocation: "richmond"
-                        })
+                            data.veganismLocation = "richmond";
+                            changeData(data);
                         console.log("Vegansim location = " + data.veganismLocation);
                             if (data.veganismLocation == "vancouver" || "burnaby") {
                                 vancouverClicked(0.5);
@@ -202,9 +195,8 @@ const AccountSetUp = ({}) => {
                         <div className="likert_choice" id="likert_money1">
                             <input type="radio" id="js_likert_money1" value="money1" name="vegan_budget"
                             onClick = {() => {
-                                changeData({
-                                    veganismBudget: "money1"
-                            })
+                                data.veganismBudget = "money1";
+                                changeData(data);
                                 console.log("Veganism budget = " + data.veganismBudget);
                                 finishClicked(1);
                             }}/>
@@ -215,9 +207,8 @@ const AccountSetUp = ({}) => {
                         <div className="likert_choice" id="likert_money2">
                             <input type="radio" id="js_likert_money2" value="money2" name="vegan_budget"
                                 onClick = {() => {
-                                    changeData({
-                                        veganismBudget: "money2"
-                                })
+                                    data.veganismBudget = "money2";
+                                    changeData(data);
                                     console.log("Veganism budget = " + data.veganismBudget);
                                 finishClicked(1);
                             }}/>
@@ -228,9 +219,8 @@ const AccountSetUp = ({}) => {
                         <div className="likert_choice"  id="likert_money3">
                             <input type="radio" id="js_likert_money3" value="money3" name="vegan_budget"
                                 onClick = {() => {
-                                    changeData({
-                                        veganismBudget: "money3"
-                                })
+                                    data.veganismBudget = "money3";
+                                    changeData(data);
                                     console.log("Veganism budget = " + data.veganismBudget);
                                 finishClicked(1);
                             }}/>
