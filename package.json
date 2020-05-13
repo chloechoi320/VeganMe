@@ -4,6 +4,7 @@
   "description": "Final project for DCD X Design1",
   "main": "index.js",
   "scripts": {
+    "heroku-postbuild": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
