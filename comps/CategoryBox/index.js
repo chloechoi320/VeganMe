@@ -3,10 +3,10 @@ import Header from '../Header';
 import './categorybox.css';
 import { MdRestaurant } from 'react-icons/md'
 
-const CategoryBox = ({headerText, defaultText, description}) => 
+const CategoryBox = ({headerText, defaultText, img, description}) => 
 
 <div className="category_container">
-    <div className="category_image"><img src={require ('../../pages/Recipe/dish.png')}></img></div>
+    <div style={{backgroundImage:img}} className="category_image"></div>
     <div className="category_header_container">
 
         <div className="category_icon">
@@ -22,7 +22,8 @@ const CategoryBox = ({headerText, defaultText, description}) =>
 
 CategoryBox.defaultProps = {
     defaultText: "Restaurants", // location (restaurants / grocery)
-    description: "A delicious breakfast bowl!"
+    description: "A delicious breakfast bowl!",
+    img: 'url("https://images.unsplash.com/photo-1494859802809-d069c3b71a8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")'
 };
 
 export default CategoryBox;
