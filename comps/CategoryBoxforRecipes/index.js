@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Header';
 import './categoryboxforrecipes.css';
-import {FaWineGlassAlt} from 'react-icons/fa';
+import {FaListUl} from 'react-icons/fa';
 
 
 const CategoryBoxforRecipes = ({headerText, defaultText, description}) => 
@@ -9,22 +9,18 @@ const CategoryBoxforRecipes = ({headerText, defaultText, description}) =>
 <div className="category_container">
     <div className="category_image"><img src={require('../../pages/Recipe/veganburger.png')}></img></div>
     <div className="category_header_container">
-        <Header fontSize={10} text={headerText}/>
-        <p class="category_description">{description}</p>
-    </div>
-    <div className="category_link">
-        <div className="category_icon">
-            <FaWineGlassAlt color="#FFF" size="1em"/>
+    <div className="category_icon">
+            <FaListUl color="#FFF" size="1em"/>
         </div>
         <div>
-            <Header fontSize={8} text={defaultText}/>
+            <Header fontSize={10} text={defaultText}/>
         </div>
-        </div>
+    </div>
+    <p class="category_description">{description}</p>
 </div>
 
 CategoryBoxforRecipes.defaultProps = {
-    headerText: "Meet on Main",
-    defaultText: "Restaurants", // this is either recipes or restaurants
+    defaultText: "Recipes", // recipe / DIY
     description: "A delicious breakfast bowl!"
 };
 

@@ -12,14 +12,12 @@ import { FaTshirt } from "react-icons/fa";
 import { FaGift } from "react-icons/fa";
 import { FaHammer} from "react-icons/fa";
 
+import {data, changeData} from '../data';
+
 function FinishSetUp() {
     document.querySelector("#asu_page").style.right = "-100%";
     Router.push("/Home");
 }
-
-var veganismType = "none";
-var veganismMakeOrDIY = "none";
-var veganismLocation = "none";
 
 const AccountSetUp = ({}) => {
     const [food_opacity, foodClicked] = useState(0.5);
@@ -38,43 +36,44 @@ const AccountSetUp = ({}) => {
         <div id="asu_container">
             <div id="asu_logo"><img src={require('./logo.png')}/></div>
 
-            <Header text="Let's get started." fontSize={14}/>
-            <Header text="What is your name?" fontSize={14}/>
+            <Header text="Let's get started with some questions." fontSize={14}/>
 
-            <div id="asu_form">
-                <CustomForm/>
-            </div>
-
-            <div class="asu_question_container">
+            <div className="asu_question_container">
                 <Header text="What kind of veganism do you want to achieve?" fontSize={12}/>
-                <div class="display_flex">
-                    <div class="selection">
+                <div className="display_flex">
+                    <div className="selection">
 
-                        <div class="asu_circle" id="asu_food" style = {{
+                        <div className="asu_circle" id="asu_food" style = {{
                             opacity: food_opacity
                         }}
                         onClick={() => {
                             foodClicked(1);
-                            if (veganismType = "product") {
+                            changeData({
+                                veganismType: "food"
+                            })
+                            console.log(data.veganismType);
+                            if (data.veganismType = "product") {
                                 productClicked(0.5);
                         }
-                            veganismType = "food";
                         }}>
                             <FaCarrot color="#FFF" size="2em"/>
                         </div>
                         <Header fontSize={8} text="Food"/>
                     </div>
 
-                    <div class="selection">
-                        <div class="asu_circle" id="asu_product" style = {{
+                    <div className="selection">
+                        <div className="asu_circle" id="asu_product" style = {{
                             opacity: product_opacity
                         }}
                         onClick={() => {
                             productClicked(1);
-                            if (veganismType = "food") {
+                            changeData({
+                                veganismType: "product"
+                        })
+                            console.log(data.veganismType);
+                            if (data.veganismType = "food") {
                                 foodClicked(0.5);
                             }
-                            veganismType = "product";
                         }}>
                             <FaTshirt color="#FFF" size="2em"/>
                         </div>
@@ -83,36 +82,42 @@ const AccountSetUp = ({}) => {
                 </div>
             </div>
 
-            <div class="asu_question_container">
+            <div className="asu_question_container">
                 <Header text="Are you looking to buy premade vegan items or make them yourself?" fontSize={12}/>
-                <div class="display_flex">
+                <div className="display_flex">
 
-                    <div class="selection">
-                        <div class="asu_circle" id="asu_premade" style = {{
+                    <div className="selection">
+                        <div className="asu_circle" id="asu_premade" style = {{
                             opacity: premade_opacity
                         }}
                         onClick={() => {
                             premadeClicked(1);
-                            if (veganismMakeOrDIY = "diy") {
+                            changeData({
+                                veganismMakeOrDIY: "premade"
+                        })
+                            console.log(data.veganismMakeOrDIY);
+                            if (data.veganismMakeOrDIY = "diy") {
                                 diyClicked(0.5);
                         }
-                            veganismMakeOrDIY = "premade";
                         }}>
                             <FaGift color="#FFF" size="2em"/>
                         </div>
                         <Header fontSize={8} text="Premade"/>
                     </div>
 
-                    <div class="selection">
-                        <div class="asu_circle" id="asu_diy" style = {{
+                    <div className="selection">
+                        <div className="asu_circle" id="asu_diy" style = {{
                             opacity: diy_opacity
                         }}
                         onClick={() => {
                             diyClicked(1);
-                            if (veganismMakeOrDIY = "premade") {
+                            changeData({
+                                veganismMakeOrDIY: "diy"
+                        })
+                        console.log(data.veganismMakeOrDIY);
+                            if (data.veganismMakeOrDIY = "premade") {
                                 premadeClicked(0.5);
                         }
-                            veganismMakeOrDIY = "diy";
                         }}>
                             <FaHammer color="#FFF" size="2em"/>
                         </div>
@@ -122,55 +127,64 @@ const AccountSetUp = ({}) => {
                 </div>
             </div>
 
-            <div class="asu_question_container">
+            <div className="asu_question_container">
                 <Header text="Where are you closest to?" fontSize={12}/>
-                <div class="display_flex">
-                    <div class="selection">
+                <div className="display_flex">
+                    <div className="selection">
 
-                        <div class="asu_circle" id="asu_vancouver" style = {{
+                        <div className="asu_circle" id="asu_vancouver" style = {{
                             opacity: vancouver_opacity
                         }}
                         onClick={() => {
                             vancouverClicked(1);
-                            if (veganismLocation = "burnaby" || "richmond") {
+                            changeData({
+                                veganismLocation: "vancouver"
+                        })
+                        console.log(data.veganismLocation);
+                            if (data.veganismLocation = "burnaby" || "richmond") {
                                 burnabyClicked(0.5);
                                 richmondClicked(0.5);
                         }
-                            veganismLocation = "vancouver";
                         }}>
                             <Header fontSize={8} text="VAN" color="#FFF"/>
                         </div>
                         <Header fontSize={8} text="Vancouver"/>
                     </div>
 
-                    <div class="selection">
-                        <div class="asu_circle" id="asu_burnaby" style = {{
+                    <div className="selection">
+                        <div className="asu_circle" id="asu_burnaby" style = {{
                             opacity: burnaby_opacity
                         }}
                         onClick={() => {
                             burnabyClicked(1);
-                            if (veganismLocation = "vancouver" || "richmond") {
+                            changeData({
+                                veganismLocation: "burnaby"
+                        })
+                        console.log(data.veganismLocation);
+                            if (data.veganismLocation = "vancouver" || "richmond") {
                                 vancouverClicked(0.5);
                                 richmondClicked(0.5);
                         }
-                            veganismLocation = "burnaby";
                         }}>
                             <Header fontSize={8} text="BBY" color="#FFF"/>
                         </div>
                         <Header fontSize={8} text="Burnaby"/>
                     </div>
 
-                    <div class="selection">
-                        <div class="asu_circle" id="asu_richmond" style = {{
+                    <div className="selection">
+                        <div className="asu_circle" id="asu_richmond" style = {{
                             opacity: richmond_opacity
                         }}
                         onClick={() => {
                             richmondClicked(1);
-                            if (veganismLocation = "vancouver" || "burnaby") {
+                            changeData({
+                                veganismLocation: "richmond"
+                        })
+                        console.log(data.veganismLocation);
+                            if (data.veganismLocation = "vancouver" || "burnaby") {
                                 vancouverClicked(0.5);
                                 burnabyClicked(0.5);
                         }
-                            veganismLocation = "richmond";
                         }}>
                             <Header fontSize={8} text="RICH" color="#FFF"/>
                         </div>
@@ -179,42 +193,48 @@ const AccountSetUp = ({}) => {
                 </div>
             </div>
 
-            <div class="asu_question_container">
+            <div className="asu_question_container">
                 <Header text="How much money can you commit to veganism?" fontSize={12}/>
-                <div class="display_flex">
+                <div className="display_flex">
                 <div id="radio_container">
                     <div id="choices_container">
 
-                        <div class="likert_choice" id="likert_money1">
+                        <div className="likert_choice" id="likert_money1">
                             <input type="radio" id="js_likert_money1" value="money1" name="vegan_budget"
                             onClick = {() => {
-                                var likert_value = document.querySelector("#js_likert_money1").value;
-                                console.log(likert_value);
+                                changeData({
+                                    veganismBudget: "money1"
+                            })
+                                console.log(data.likert_value);
                                 finishClicked(1);
                             }}/>
-                            <span class="checkmark"></span>
+                            <span className="checkmark"></span>
                             <Header fontSize={8} text="$"/>
                         </div>
 
-                        <div class="likert_choice" id="likert_money2">
+                        <div className="likert_choice" id="likert_money2">
                             <input type="radio" id="js_likert_money2" value="money2" name="vegan_budget"
                                 onClick = {() => {
-                                var likert_value = document.querySelector("#js_likert_money2").value;
-                                console.log(likert_value);
+                                    changeData({
+                                        veganismBudget: "money2"
+                                })
+                                    console.log(data.likert_value);
                                 finishClicked(1);
                             }}/>
-                            <span class="checkmark"></span>
+                            <span className="checkmark"></span>
                             <Header fontSize={8} text="$$"/>
                         </div>
 
-                        <div class="likert_choice"  id="likert_money3">
+                        <div className="likert_choice"  id="likert_money3">
                             <input type="radio" id="js_likert_money3" value="money3" name="vegan_budget"
                                 onClick = {() => {
-                                var likert_value = document.querySelector("#js_likert_money3").value;
-                                console.log(likert_value);
+                                    changeData({
+                                        veganismBudget: "money3"
+                                })
+                                    console.log(data.likert_value);
                                 finishClicked(1);
                             }}/>
-                            <span class="checkmark"></span>
+                            <span className="checkmark"></span>
                             <Header fontSize={8} text="$$$"/>
                         </div>
                     </div>

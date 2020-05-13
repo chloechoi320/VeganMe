@@ -228,7 +228,7 @@ const UserPreference = ({}) => {
             <div id="up_button" style = {{
                     opacity: finish_opacity
                 }}>
-                <Buttons text="Finish" onClick={FinishSetUp}/>
+                <Buttons text="Finish" onClick={EditPreference}/>
             </div>
         </div>
     </div>

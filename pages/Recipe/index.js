@@ -28,7 +28,8 @@ function ClickFav() {
 
 
 const RecipePage = () => {
-    return <div className="recipe-pg">
+    return <div>
+    <div className="recipe-pg">
         <BackHeader />
         <div className="rp-container">
             <div className="rp-head">
@@ -67,9 +68,8 @@ const RecipePage = () => {
             <GBforBacktoTop />
             </div>
         </div>
-        <div className="nav-bar">
-            <NavigationBar />
         </div>
+        <NavigationBar />
     </div>
 }
 
