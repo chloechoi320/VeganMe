@@ -9,6 +9,10 @@ import CategoryBoxforRecipes from '../../comps/CategoryBoxforRecipes';
 import NavigationBar from '../../comps/NavigationBar';
 import GBforCategories from '../../comps/GBforCategories';
 
+import {data, changeData} from '../data';
+
+console.log(data);
+
 function ClickGB() {
     document.querySelector("#home_greybutton").style.right = "-100%";
     Router.push("/Categories");
@@ -25,30 +29,24 @@ function ClickRestaurant() {
 }
 
 const Home = ({}) => {
-    return <div id="home_page">
+    return <div>
+    <div id="home_page">
     <div className="head">
-    <div id="home_user">
-        <FaUserCircle size="4.5em" color="#789174"/>
+        <div id="home_user">
+            <FaUserCircle size="4.5em" color="#789174"/>
+        </div>
+        <div id="home_header">
+            <Header text="Good Afternoon!" fontSize={14}/>
+        </div>
     </div>
-    <div id="home_header">
-        <Header text="Good Afternoon!" fontSize={14}/>
+        <div id="home_categorybox1" onClick={ClickRestaurant}>
+            <CategoryBox description="Find local vegan restaurants within your budget."/>
+        </div>
+        <div id="home_categorybox2" onClick={ClickRecipe}>
+            <CategoryBoxforRecipes description="Popular and easy-to-make recipes!"/>
+        </div>
     </div>
-    </div>
-    <div id="home_greybutton" onClick={ClickGB}>
-    <GBforCategories />
-    </div>
-    <div id="home_categorybox1" onClick={ClickRecipe}>
-        <CategoryBox description="This savory vegan breakfast bowl recipe features healthy…"/>
-    </div>
-    <div id="home_categorybox2" onClick={ClickRestaurant}>
-        <CategoryBoxforRecipes description="Innovative vegan & vegetarian dishes are the draw at this…"/>
-    </div>
-    <div id="home_more">
-        <p>Load More</p>
-    </div>
-    <div id="home_navigationbar">
         <NavigationBar />
-    </div>
     </div>
 }
 

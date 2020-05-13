@@ -1,5 +1,5 @@
 .bh_container {
-    width: 375px;
+    width: 100vw;
     height: 75px;
     background-color: #FFF;
     display: flex;

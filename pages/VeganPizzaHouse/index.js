@@ -8,7 +8,8 @@ import Header from "../../comps/Header";
 import NavigationBar from "../../comps/NavigationBar";
 
 const VeganPizzaHousePage = () => {
-    return <div className="vph-pg">
+    return <div>
+    <div className="vph-pg">
         <BackHeader />
         <div className="vph-container">
             <div vph-head>
@@ -24,9 +25,8 @@ const VeganPizzaHousePage = () => {
                 <p>For more info, visit <a href="http://www.veganpizzahouse.ca/">veganpizzahouse.ca</a></p>
             </div>
         </div>
-        <div className="nav-bar">
-            <NavigationBar />
         </div>
+            <NavigationBar />
     </div>
 }
 

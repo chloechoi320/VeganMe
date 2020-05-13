@@ -7,33 +7,28 @@ import CustomForm from "../../comps/CustomForm";
 import Buttons from "../../comps/Buttons";
 
 // icons
-import { FaCarrot } from "react-icons/fa"
-import { FaTshirt } from "react-icons/fa"
-import { FaHandHoldingHeart } from "react-icons/fa"
-import { FaLeaf } from "react-icons/fa"
-import { FaHeart } from "react-icons/fa"
-import { FaUser } from "react-icons/fa"
-import { FaUsers } from "react-icons/fa"
+import { FaCarrot } from "react-icons/fa";
+import { FaTshirt } from "react-icons/fa";
+import { FaGift } from "react-icons/fa";
+import { FaHammer} from "react-icons/fa";
+
+import {data, changeData} from '../data';
 
 function FinishSetUp() {
     document.querySelector("#asu_page").style.right = "-100%";
     Router.push("/Home");
 }
 
-var veganismType = "none";
-var veganismWhy = "none";
-var veganismStrict = "none";
-
 const AccountSetUp = ({}) => {
     const [food_opacity, foodClicked] = useState(0.5);
     const [product_opacity, productClicked] = useState(0.5);
 
-    const [ethical_opacity, ethicalClicked] = useState(0.5);
-    const [environment_opacity, environmentClicked] = useState(0.5);
-    const [health_opacity, healthClicked] = useState(0.5);
+    const [premade_opacity, premadeClicked] = useState(0.5);
+    const [diy_opacity, diyClicked] = useState(0.5);
 
-    const [individual_opacity, individualClicked] = useState(0.5);
-    const [social_opacity, socialClicked] = useState(0.5);
+    const [vancouver_opacity, vancouverClicked] = useState(0.5);
+    const [burnaby_opacity, burnabyClicked] = useState(0.5);
+    const [richmond_opacity, richmondClicked] = useState(0.5);
 
     const [finish_opacity, finishClicked] = useState(0.5);
 
@@ -41,43 +36,44 @@ const AccountSetUp = ({}) => {
         <div id="asu_container">
             <div id="asu_logo"><img src={require('./logo.png')}/></div>
 
-            <Header text="Let's get started." fontSize={14}/>
-            <Header text="What is your name?" fontSize={14}/>
+            <Header text="Let's get started with some questions." fontSize={14}/>
 
-            <div id="asu_form">
-                <CustomForm/>
-            </div>
-
-            <div class="asu_question_container">
+            <div className="asu_question_container">
                 <Header text="What kind of veganism do you want to achieve?" fontSize={12}/>
-                <div class="display_flex">
-                    <div class="selection">
+                <div className="display_flex">
+                    <div className="selection">
 
-                        <div class="asu_circle" id="asu_food" style = {{
+                        <div className="asu_circle" id="asu_food" style = {{
                             opacity: food_opacity
                         }}
                         onClick={() => {
                             foodClicked(1);
-                            if (veganismType = "product") {
+                            changeData({
+                                veganismType: "food"
+                            })
+                            console.log(data.veganismType);
+                            if (data.veganismType = "product") {
                                 productClicked(0.5);
                         }
-                            veganismType = "food";
                         }}>
                             <FaCarrot color="#FFF" size="2em"/>
                         </div>
                         <Header fontSize={8} text="Food"/>
                     </div>
 
-                    <div class="selection">
-                        <div class="asu_circle" id="asu_product" style = {{
+                    <div className="selection">
+                        <div className="asu_circle" id="asu_product" style = {{
                             opacity: product_opacity
                         }}
                         onClick={() => {
                             productClicked(1);
-                            if (veganismType = "food") {
+                            changeData({
+                                veganismType: "product"
+                        })
+                            console.log(data.veganismType);
+                            if (data.veganismType = "food") {
                                 foodClicked(0.5);
                             }
-                            veganismType = "product";
                         }}>
                             <FaTshirt color="#FFF" size="2em"/>
                         </div>
@@ -86,138 +82,160 @@ const AccountSetUp = ({}) => {
                 </div>
             </div>
 
-            <div class="asu_question_container">
-                <Header text="Why do you want to be vegan?" fontSize={12}/>
-                <div class="display_flex">
+            <div className="asu_question_container">
+                <Header text="Are you looking to buy premade vegan items or make them yourself?" fontSize={12}/>
+                <div className="display_flex">
 
-                    <div class="selection">
-                        <div class="asu_circle" id="asu_ethical" style = {{
-                            opacity: ethical_opacity
+                    <div className="selection">
+                        <div className="asu_circle" id="asu_premade" style = {{
+                            opacity: premade_opacity
                         }}
                         onClick={() => {
-                            ethicalClicked(1);
-                            if (veganismWhy = "health" || "environmental") {
-                                environmentClicked(0.5);
-                                healthClicked(0.5);
+                            premadeClicked(1);
+                            changeData({
+                                veganismMakeOrDIY: "premade"
+                        })
+                            console.log(data.veganismMakeOrDIY);
+                            if (data.veganismMakeOrDIY = "diy") {
+                                diyClicked(0.5);
                         }
-                            veganismWhy = "ethical";
                         }}>
-                            <FaHandHoldingHeart color="#FFF" size="2em"/>
+                            <FaGift color="#FFF" size="2em"/>
                         </div>
-                        <Header fontSize={8} text="Ethical"/>
+                        <Header fontSize={8} text="Premade"/>
                     </div>
 
-                    <div class="selection">
-                        <div class="asu_circle" id="asu_environmental" style = {{
-                            opacity: environment_opacity
+                    <div className="selection">
+                        <div className="asu_circle" id="asu_diy" style = {{
+                            opacity: diy_opacity
                         }}
                         onClick={() => {
-                            environmentClicked(1);
-                            if (veganismWhy = "ethical" || "health") {
-                                ethicalClicked(0.5);
-                                healthClicked(0.5);
+                            diyClicked(1);
+                            changeData({
+                                veganismMakeOrDIY: "diy"
+                        })
+                        console.log(data.veganismMakeOrDIY);
+                            if (data.veganismMakeOrDIY = "premade") {
+                                premadeClicked(0.5);
                         }
-                            veganismWhy = "environmental";
                         }}>
-                            <FaLeaf color="#FFF" size="2em"/>
+                            <FaHammer color="#FFF" size="2em"/>
                         </div>
-                        <Header fontSize={8} text="Environmental"/>
+                        <Header fontSize={8} text="Make them"/>
                     </div>
 
-                    <div class="selection">
-                        <div class="asu_circle" id="asu_health" style = {{
-                            opacity: health_opacity
+                </div>
+            </div>
+
+            <div className="asu_question_container">
+                <Header text="Where are you closest to?" fontSize={12}/>
+                <div className="display_flex">
+                    <div className="selection">
+
+                        <div className="asu_circle" id="asu_vancouver" style = {{
+                            opacity: vancouver_opacity
                         }}
                         onClick={() => {
-                            healthClicked(1);
-                            if (veganismWhy = "environmental" || "ethical") {
-                                environmentClicked(0.5);
-                                ethicalClicked(0.5);
+                            vancouverClicked(1);
+                            changeData({
+                                veganismLocation: "vancouver"
+                        })
+                        console.log(data.veganismLocation);
+                            if (data.veganismLocation = "burnaby" || "richmond") {
+                                burnabyClicked(0.5);
+                                richmondClicked(0.5);
                         }
-                            veganismWhy = "health";
                         }}>
-                            <FaHeart color="#FFF" size="2em"/>
+                            <Header fontSize={8} text="VAN" color="#FFF"/>
                         </div>
-                        <Header fontSize={8} text="Health"/>
+                        <Header fontSize={8} text="Vancouver"/>
+                    </div>
+
+                    <div className="selection">
+                        <div className="asu_circle" id="asu_burnaby" style = {{
+                            opacity: burnaby_opacity
+                        }}
+                        onClick={() => {
+                            burnabyClicked(1);
+                            changeData({
+                                veganismLocation: "burnaby"
+                        })
+                        console.log(data.veganismLocation);
+                            if (data.veganismLocation = "vancouver" || "richmond") {
+                                vancouverClicked(0.5);
+                                richmondClicked(0.5);
+                        }
+                        }}>
+                            <Header fontSize={8} text="BBY" color="#FFF"/>
+                        </div>
+                        <Header fontSize={8} text="Burnaby"/>
+                    </div>
+
+                    <div className="selection">
+                        <div className="asu_circle" id="asu_richmond" style = {{
+                            opacity: richmond_opacity
+                        }}
+                        onClick={() => {
+                            richmondClicked(1);
+                            changeData({
+                                veganismLocation: "richmond"
+                        })
+                        console.log(data.veganismLocation);
+                            if (data.veganismLocation = "vancouver" || "burnaby") {
+                                vancouverClicked(0.5);
+                                burnabyClicked(0.5);
+                        }
+                        }}>
+                            <Header fontSize={8} text="RICH" color="#FFF"/>
+                        </div>
+                        <Header fontSize={8} text="Richmond"/>
                     </div>
                 </div>
             </div>
 
-            <div class="asu_question_container">
-                <Header text="How strict will you be?" fontSize={12}/>
-                <div class="display_flex">
-                    <div class="selection">
-
-                        <div class="asu_circle" id="asu_individual" style = {{
-                            opacity: individual_opacity
-                        }}
-                        onClick={() => {
-                            individualClicked(1);
-                            if (veganismStrict = "social") {
-                                socialClicked(0.5);
-                        }
-                            veganismStrict = "individual";
-                        }}>
-                            <FaUser color="#FFF" size="2em"/>
-                        </div>
-                        <Header fontSize={8} text="Individual"/>
-                    </div>
-
-                    <div class="selection">
-                        <div class="asu_circle" id="asu_social" style = {{
-                            opacity: social_opacity
-                        }}
-                        onClick={() => {
-                            socialClicked(1);
-                            if (veganismStrict = "individual") {
-                                individualClicked(0.5);
-                        }
-                            veganismStrict = "social";
-                        }}>
-                            <FaUsers color="#FFF" size="2em"/>
-                        </div>
-                        <Header fontSize={8} text="Social"/>
-                    </div>
-                </div>
-            </div>
-
-            <div class="asu_question_container">
-                <Header text="How often do you buy or use vegan products?" fontSize={12}/>
-                <div class="display_flex">
+            <div className="asu_question_container">
+                <Header text="How much money can you commit to veganism?" fontSize={12}/>
+                <div className="display_flex">
                 <div id="radio_container">
                     <div id="choices_container">
 
-                        <div class="likert_choice" id="likert_never">
-                            <input type="radio" id="js_likert_never" value="never" name="vegan_frequency"
+                        <div className="likert_choice" id="likert_money1">
+                            <input type="radio" id="js_likert_money1" value="money1" name="vegan_budget"
                             onClick = {() => {
-                                var likert_value = document.querySelector("#js_likert_never").value;
-                                console.log(likert_value);
+                                changeData({
+                                    veganismBudget: "money1"
+                            })
+                                console.log(data.likert_value);
                                 finishClicked(1);
                             }}/>
-                            <span class="checkmark"></span>
-                            <Header fontSize={8} text="Never"/>
+                            <span className="checkmark"></span>
+                            <Header fontSize={8} text="$"/>
                         </div>
 
-                        <div class="likert_choice" id="likert_sometimes">
-                            <input type="radio" id="js_likert_sometimes" value="sometimes" name="vegan_frequency"
+                        <div className="likert_choice" id="likert_money2">
+                            <input type="radio" id="js_likert_money2" value="money2" name="vegan_budget"
                                 onClick = {() => {
-                                var likert_value = document.querySelector("#js_likert_sometimes").value;
-                                console.log(likert_value);
+                                    changeData({
+                                        veganismBudget: "money2"
+                                })
+                                    console.log(data.likert_value);
                                 finishClicked(1);
                             }}/>
-                            <span class="checkmark"></span>
-                            <Header fontSize={8} text="Sometimes"/>
+                            <span className="checkmark"></span>
+                            <Header fontSize={8} text="$$"/>
                         </div>
 
-                        <div class="likert_choice"  id="likert_regularly">
-                            <input type="radio" id="js_likert_regularly" value="regularly" name="vegan_frequency"
+                        <div className="likert_choice"  id="likert_money3">
+                            <input type="radio" id="js_likert_money3" value="money3" name="vegan_budget"
                                 onClick = {() => {
-                                var likert_value = document.querySelector("#js_likert_regularly").value;
-                                console.log(likert_value);
+                                    changeData({
+                                        veganismBudget: "money3"
+                                })
+                                    console.log(data.likert_value);
                                 finishClicked(1);
                             }}/>
-                            <span class="checkmark"></span>
-                            <Header fontSize={8} text="Regularly"/>
+                            <span className="checkmark"></span>
+                            <Header fontSize={8} text="$$$"/>
                         </div>
                     </div>
                     <div id="background-bar"></div>

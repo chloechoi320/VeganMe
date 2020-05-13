@@ -8,7 +8,6 @@ body, html {
     /* width: 375px; */
     width: 100%;
     height: 100vh;
-    box-shadow: 0 0 5px #1e1d1d74;
     position: relative;
     display: flex;
     flex-direction: column;

@@ -12,10 +12,10 @@ function ClickHome() {
     Router.push("/Home");
 }
 
-function ClickMap() {
-    document.querySelector("#map").style.right = "-100%";
-    Router.push("/Locations");
-}
+// function ClickMap() {
+//     document.querySelector("#map").style.right = "-100%";
+//     Router.push("/Locations");
+// }
 
 function ClickStar() {
     document.querySelector("#star").style.right = "-100%";
@@ -32,9 +32,6 @@ const NavigationBar = () => <div>
         <div class="container">
             <div id="home" onClick={ClickHome}>
                 <FiHome size="1.8em"/>
-            </div>
-            <div id="map" onClick={ClickMap}>
-                <FiMapPin size="1.8em"/>
             </div>
             <div id="star" onClick={ClickStar}>
                 <FaRegStar size="1.8em"/>

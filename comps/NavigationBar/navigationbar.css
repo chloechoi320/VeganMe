@@ -1,18 +1,12 @@
-html, body {
-    margin: 0;
-}
-
 .bar {
-    display: block;
+    width: 100vw;
     position: fixed;
     bottom: 0;
-    width: 375px;
 }
 
 .container {
     height: 55px;
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     background-color: #EFEEEB;

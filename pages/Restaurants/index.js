@@ -15,7 +15,8 @@ function ClickRest() {
 }
 
 const RestaurantsPage = ({}) => {
-    return <div className="rest-page">
+    return <div> 
+    <div className="rest-page">
         <BackHeader/>
         <div className="rest-container">
             <div className="rest-header">
@@ -35,10 +36,8 @@ const RestaurantsPage = ({}) => {
                 <Restaurants name ="The Acorn Restaurant" />
             </div>
         </div>
-        <div className="nav-bar">
-            <NavigationBar />
         </div>
-        {/* dude i am so confused. sometimes you don't need a div, sometimes the position is absolute and other times it's relative wth. */}
+            <NavigationBar />
     </div>
 }
 
