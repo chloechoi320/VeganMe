@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import "./restaurants.css";
+import "./gas.css";
 import Link from 'next/link';
 import Router from 'next/router';
 import BackHeader from "../../comps/BackHeader";
@@ -7,7 +7,7 @@ import Header from "../../comps/Header";
 import Restaurants from "../../comps/Restuarants";
 import NavigationBar from "../../comps/NavigationBar";
 
-import {FaWineGlassAlt} from 'react-icons/fa';
+import {FaStore} from 'react-icons/fa';
 import {data, changeData} from '../../data';
 
 function ToResult() {
@@ -15,7 +15,7 @@ function ToResult() {
     Router.push("/Result");
 }
 
-const RestaurantPage = ({}) => {
+const GroceriesAndStores = ({}) => {
     console.log(data)
     switch (data.veganismLocation) {
         case "vancouver":
@@ -25,13 +25,13 @@ const RestaurantPage = ({}) => {
                     <BackHeader/>
                     <div className="rest-container">
                         <div className="rest-header">
-                            <div className="head-icon"><FaWineGlassAlt size="0.75em" color="#FFF"/></div>
-                            <Header text="Restaurants" fontSize={12}/>
+                            <div className="head-icon"><FaStore size="0.75em" color="#FFF"/></div>
+                            <Header text="Groceries & Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Auntie's Vegan Pizza ($)" onClick={ToResult} />
-                            <Restaurants name ="Four Guys Vegan Burgers ($)" />
-                            <Restaurants name ="Vegan Cave Cafe ($)" />
+                            <Restaurants name="No Frvills ($)" onClick={ToResult} />
+                            <Restaurants name ="Banana Grove Grocery ($)" />
+                            <Restaurants name ="Mikey's Craft ($)" />
                         </div>
                     </div>
                     </div>
@@ -43,13 +43,13 @@ const RestaurantPage = ({}) => {
                     <BackHeader/>
                     <div className="rest-container">
                         <div className="rest-header">
-                            <div className="head-icon"><FaWineGlassAlt size="0.75em" color="#FFF"/></div>
-                            <Header text="Restaurants" fontSize={12}/>
+                            <div className="head-icon"><FaStore size="0.75em" color="#FFF"/></div>
+                            <Header text="Groceries & Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Meet on Main ($$)" onClick={ToResult} />
-                            <Restaurants name ="CHOMP Restaurant ($$)" />
-                            <Restaurants name ="Dharma Kitchen ($$)" />
+                            <Restaurants name="VeganMart ($$)" onClick={ToResult} />
+                            <Restaurants name ="Everyday Vegan Supplies ($$)" />
+                            <Restaurants name ="Valmart ($$)" />
                         </div>
                     </div>
                     </div>
@@ -61,13 +61,13 @@ const RestaurantPage = ({}) => {
                     <BackHeader/>
                     <div className="rest-container">
                         <div className="rest-header">
-                            <div className="head-icon"><FaWineGlassAlt size="0.75em" color="#FFF"/></div>
-                            <Header text="Restaurants" fontSize={12}/>
+                            <div className="head-icon"><FaStore size="0.75em" color="#FFF"/></div>
+                            <Header text="Groceries & Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Succulent Club Cafe ($$$)" onClick={ToResult} />
-                            <Restaurants name ="Mika Sushi Restaurant + Bar ($$$)" />
-                            <Restaurants name ="White & Red Eatery ($$$)" />
+                            <Restaurants name="vgan. ($$$)" onClick={ToResult} />
+                            <Restaurants name ="Safevay ($$$)" />
+                            <Restaurants name ="Whole Foods ($$$)" />
                         </div>
                     </div>
                     </div>
@@ -83,13 +83,13 @@ const RestaurantPage = ({}) => {
                     <BackHeader/>
                     <div className="rest-container">
                         <div className="rest-header">
-                            <div className="head-icon"><FaWineGlassAlt size="0.75em" color="#FFF"/></div>
-                            <Header text="Restaurants" fontSize={12}/>
+                            <div className="head-icon"><FaStore size="0.75em" color="#FFF"/></div>
+                            <Header text="Groceries & Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Uncle's Vegan Pizza ($)" location="Burnaby, BC" onClick={ToResult} />
-                            <Restaurants name ="Six Guys Vegan Burgers ($)" location="Burnaby, BC" />
-                            <Restaurants name ="Vegan Island Cafe ($)" location="Burnaby, BC" />
+                            <Restaurants name="Dollarvama ($)" location="Burnaby, BC" onClick={ToResult} />
+                            <Restaurants name ="No Frvills($)" location="Burnaby, BC" />
+                            <Restaurants name ="Yewniqlo ($)" location="Burnaby, BC" />
                         </div>
                     </div>
                     </div>
@@ -101,13 +101,13 @@ const RestaurantPage = ({}) => {
                     <BackHeader/>
                     <div className="rest-container">
                         <div className="rest-header">
-                            <div className="head-icon"><FaWineGlassAlt size="0.75em" color="#FFF"/></div>
-                            <Header text="Restaurants" fontSize={12}/>
+                            <div className="head-icon"><FaStore size="0.75em" color="#FFF"/></div>
+                            <Header text="Groceries & Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Meet at Metrotown ($$)" location="Burnaby, BC" onClick={ToResult} />
-                            <Restaurants name ="CHONK Restaurant ($$)" location="Burnaby, BC"/>
-                            <Restaurants name ="Dharkma Kitchen ($$)" location="Burnaby, BC"/>
+                            <Restaurants name="Save on Foods ($$)" location="Burnaby, BC" onClick={ToResult} />
+                            <Restaurants name ="Valmart ($$)" location="Burnaby, BC"/>
+                            <Restaurants name ="Superstore ($$)" location="Burnaby, BC"/>
                         </div>
                     </div>
                     </div>
@@ -119,13 +119,13 @@ const RestaurantPage = ({}) => {
                     <BackHeader/>
                     <div className="rest-container">
                         <div className="rest-header">
-                            <div className="head-icon"><FaWineGlassAlt size="0.75em" color="#FFF"/></div>
-                            <Header text="Restaurants" fontSize={12}/>
+                            <div className="head-icon"><FaStore size="0.75em" color="#FFF"/></div>
+                            <Header text="Groceries & Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Earlz Restaurant + Bar ($$$)" location="Burnaby, BC" onClick={ToResult} />
-                            <Restaurants name ="Minamee Sushi Bar ($$$)" location="Burnaby, BC"/>
-                            <Restaurants name ="Gotham Eatery ($$$)" location="Burnaby, BC" />
+                            <Restaurants name="vgan. ($$$)" location="Burnaby, BC" onClick={ToResult} />
+                            <Restaurants name ="Truly Vegan Supplies ($$$)" location="Burnaby, BC"/>
+                            <Restaurants name ="Whole Foods ($$$)" location="Burnaby, BC" />
                         </div>
                     </div>
                     </div>
@@ -141,13 +141,13 @@ const RestaurantPage = ({}) => {
                     <BackHeader/>
                     <div className="rest-container">
                         <div className="rest-header">
-                            <div className="head-icon"><FaWineGlassAlt size="0.75em" color="#FFF"/></div>
-                            <Header text="Restaurants" fontSize={12}/>
+                            <div className="head-icon"><FaStore size="0.75em" color="#FFF"/></div>
+                            <Header text="Groceries & Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Grandma's Vegan Pizza ($)" location="Richmond, BC" onClick={ToResult} />
-                            <Restaurants name ="Three Guys Vegan Burgers ($)" location="Richmond, BC" />
-                            <Restaurants name ="Vegan Inlet Cafe ($)" location="Richmond, BC" />
+                            <Restaurants name="Dollarvama ($)" location="Richmond, BC" onClick={ToResult} />
+                            <Restaurants name ="No Frvills ($)" location="Richond, BC" />
+                            <Restaurants name ="Karen's Paradise ($)" location="Richmond, BC" />
                         </div>
                     </div>
                     </div>
@@ -159,13 +159,13 @@ const RestaurantPage = ({}) => {
                     <BackHeader/>
                     <div className="rest-container">
                         <div className="rest-header">
-                            <div className="head-icon"><FaWineGlassAlt size="0.75em" color="#FFF"/></div>
-                            <Header text="Restaurants" fontSize={12}/>
+                            <div className="head-icon"><FaStore size="0.75em" color="#FFF"/></div>
+                            <Header text="Groceries & Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Meet at Aberdeen ($$)" location="Richmond, BC" onClick={ToResult} />
-                            <Restaurants name ="Ding Restaurant ($$)" location="Richmond, BC"/>
-                            <Restaurants name ="Mama's Kitchen ($$)" location="Richmond, BC"/>
+                            <Restaurants name="T&V ($$)" location="Richmond, BC" onClick={ToResult} />
+                            <Restaurants name ="Valmart ($$)" location="Richmond, BC"/>
+                            <Restaurants name ="Superstore ($$)" location="Richmond, BC"/>
                         </div>
                     </div>
                     </div>
@@ -177,13 +177,13 @@ const RestaurantPage = ({}) => {
                     <BackHeader/>
                     <div className="rest-container">
                         <div className="rest-header">
-                            <div className="head-icon"><FaWineGlassAlt size="0.75em" color="#FFF"/></div>
-                            <Header text="Restaurants" fontSize={12}/>
+                            <div className="head-icon"><FaStore size="0.75em" color="#FFF"/></div>
+                            <Header text="Groceries & Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Joue's Restaurant + Bar ($$$)" location="Richmond, BC" onClick={ToResult} />
-                            <Restaurants name ="Green Leaf Sushi Bar ($$$)" location="Richmond, BC"/>
-                            <Restaurants name ="Lightingale Eatery ($$$)" location="Richmond, BC" />
+                            <Restaurants name="Chlo's ($$$)" location="Richmond, BC" onClick={ToResult} />
+                            <Restaurants name ="Soph's ($$$)" location="Richmond, BC"/>
+                            <Restaurants name ="Cin's ($$$)" location="Richmond, BC" />
                         </div>
                     </div>
                     </div>
@@ -198,8 +198,8 @@ const RestaurantPage = ({}) => {
     }
 }
 
-RestaurantPage.defaultProps = {
+GroceriesAndStores.defaultProps = {
 
 }
 
-export default RestaurantPage;
+export default GroceriesAndStores;

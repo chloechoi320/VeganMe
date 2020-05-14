@@ -23,7 +23,7 @@ const CategoryBox = ({headerText, defaultText, img, description}) =>
 CategoryBox.defaultProps = {
     defaultText: "Restaurants", // location (restaurants / grocery)
     description: "A delicious breakfast bowl!",
-    img: 'url("https://images.unsplash.com/photo-1494859802809-d069c3b71a8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")'
-};
+    img: 'url(https://images.unsplash.com/photo-1508424757105-b6d5ad9329d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80)'
+}
 
 export default CategoryBox;
