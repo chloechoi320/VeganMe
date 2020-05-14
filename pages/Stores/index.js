@@ -19,7 +19,7 @@ const StoresPage = ({}) => {
     console.log(data)
     switch (data.veganismLocation) {
         case "vancouver":
-            if (data.veganismBudget == "money1") {
+            if (data.veganismBudget == "$") {
                 return <div> 
                 <div className="rest-page">
                     <BackHeader/>
@@ -29,15 +29,24 @@ const StoresPage = ({}) => {
                             <Header text="Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Patty's Discount Store ($)" onClick={ToResult} />
-                            <Restaurants name ="Dollar Vegan ($)" />
-                            <Restaurants name ="Mama's Thrifty ($)" />
+                            <Restaurants name="Patty's Discount Store ($)" onClick={() => {
+                                ToResult(); 
+                            data.clickedLocation = "Patty's Discount Store",
+                            changeData(data)}}/>
+                            <Restaurants name ="Dollar Vegan ($)" onClick={() => {
+                                ToResult(); 
+                            data.clickedLocation = "Dollar Vegan",
+                            changeData(data)}}/>
+                            <Restaurants name ="Mama's Thrifty ($)"onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Mama's Thrifty",
+                                changeData(data)}}/>
                         </div>
                     </div>
                     </div>
                         <NavigationBar />
                 </div>
-            } else if (data.veganismBudget == "money2") {
+            } else if (data.veganismBudget == "$$") {
                 return <div> 
                 <div className="rest-page">
                     <BackHeader/>
@@ -47,15 +56,24 @@ const StoresPage = ({}) => {
                             <Header text="Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Cruelty Free & Vegan ($$)" onClick={ToResult} />
-                            <Restaurants name ="Everyday Vegan Household ($$)" />
-                            <Restaurants name ="Vegan Lifestyle ($$)" />
+                            <Restaurants name="Cruelty Free & Vegan ($$)" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Cruelty Free & Vegan",
+                                changeData(data)}}/>
+                            <Restaurants name ="Everyday Vegan Household ($$)" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Everyday Vegan Household",
+                                changeData(data)}}/>
+                            <Restaurants name ="Vegan Lifestyle ($$)" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Vegan Lifestyle",
+                                changeData(data)}} />
                         </div>
                     </div>
                     </div>
                         <NavigationBar />
                 </div>
-            } else if (data.veganismBudget == "money3") {
+            } else if (data.veganismBudget == "$$$") {
                 return <div> 
                 <div className="rest-page">
                     <BackHeader/>
@@ -65,9 +83,18 @@ const StoresPage = ({}) => {
                             <Header text="Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Extravagent Vegan ($$$)" onClick={ToResult} />
-                            <Restaurants name ="High-End Vegan Furniture ($$$)" />
-                            <Restaurants name ="Aritzeya ($$$)" />
+                            <Restaurants name="Extravagent Vegan ($$$)" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Extravagent Vegan",
+                                changeData(data)}} />
+                            <Restaurants name ="High-End Vegan Furniture ($$$)" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "High-End Vegan Furniture",
+                                changeData(data)}}/>
+                            <Restaurants name ="Aritzeya ($$$)" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Aritzeya",
+                                changeData(data)}}/>
                         </div>
                     </div>
                     </div>
@@ -77,7 +104,7 @@ const StoresPage = ({}) => {
             break;
 
         case "burnaby":
-            if (data.veganismBudget == "money1") {
+            if (data.veganismBudget == "$") {
                 return <div> 
                 <div className="rest-page">
                     <BackHeader/>
@@ -87,15 +114,24 @@ const StoresPage = ({}) => {
                             <Header text="Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="M&H Clothing ($)" location="Burnaby, BC" onClick={ToResult} />
-                            <Restaurants name ="Forever Vegan 21 ($)" location="Burnaby, BC" />
-                            <Restaurants name ="Yewniqlo ($)" location="Burnaby, BC" />
+                            <Restaurants name="M&H Clothing ($)" location="Burnaby, BC" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "M&H Clothing",
+                                changeData(data)}} />
+                            <Restaurants name ="Forever Vegan 21 ($)" location="Burnaby, BC" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Forever Vegan 21",
+                                changeData(data)}}/>
+                            <Restaurants name ="Yewniqlo ($)" location="Burnaby, BC" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Yewniqlo",
+                                changeData(data)}}/>
                         </div>
                     </div>
                     </div>
                         <NavigationBar />
                 </div>
-            } else if (data.veganismBudget == "money2") {
+            } else if (data.veganismBudget == "$$") {
                 return <div> 
                 <div className="rest-page">
                     <BackHeader/>
@@ -105,15 +141,24 @@ const StoresPage = ({}) => {
                             <Header text="Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Supervegan ($$)" location="Burnaby, BC" onClick={ToResult} />
-                            <Restaurants name ="Famous Vegan ($$)" location="Burnaby, BC"/>
-                            <Restaurants name ="ElevenTree ($$)" location="Burnaby, BC"/>
+                            <Restaurants name="Supervegan ($$)" location="Burnaby, BC" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Supervegan",
+                                changeData(data)}} />
+                            <Restaurants name ="Famous Vegan ($$)" location="Burnaby, BC" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Famous Vegan",
+                                changeData(data)}}/>
+                            <Restaurants name ="ElevenTree ($$)" location="Burnaby, BC" onClick={() => {
+                                ToResult();  
+                                data.clickedLocation = "ElevenTree",
+                                changeData(data)}}/>
                         </div>
                     </div>
                     </div>
                         <NavigationBar />
                 </div>
-            } else if (data.veganismBudget == "money3") {
+            } else if (data.veganismBudget == "$$$") {
                 return <div> 
                 <div className="rest-page">
                     <BackHeader/>
@@ -123,9 +168,18 @@ const StoresPage = ({}) => {
                             <Header text="Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Ivea Furniture ($$$)" location="Burnaby, BC" onClick={ToResult} />
-                            <Restaurants name ="Fort & Oak ($$$)" location="Burnaby, BC"/>
-                            <Restaurants name ="Deviem Beauty ($$$)" location="Burnaby, BC" />
+                            <Restaurants name="Ivea Furniture ($$$)" location="Burnaby, BC" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Ivea Furniture",
+                                changeData(data)}} />
+                            <Restaurants name ="Fort & Oak ($$$)" location="Burnaby, BC" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Fort & Oak",
+                                changeData(data)}}/>
+                            <Restaurants name ="Deviem Beauty ($$$)" location="Burnaby, BC" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Deviem Beauty",
+                                changeData(data)}}/>
                         </div>
                     </div>
                     </div>
@@ -135,7 +189,7 @@ const StoresPage = ({}) => {
             break;
 
         case "richmond":
-            if (data.veganismBudget == "money1") {
+            if (data.veganismBudget == "$") {
                 return <div> 
                 <div className="rest-page">
                     <BackHeader/>
@@ -145,15 +199,24 @@ const StoresPage = ({}) => {
                             <Header text="Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Timmy Hilfiger ($)" location="Richmond, BC" onClick={ToResult} />
-                            <Restaurants name ="Vara Clothing ($)" location="Richond, BC" />
-                            <Restaurants name ="Urban Vegan Life ($)" location="Richmond, BC" />
+                            <Restaurants name="Timmy Hilfiger ($)" location="Richmond, BC" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Timmy Hilfiger",
+                                changeData(data)}} />
+                            <Restaurants name ="Vara Clothing ($)" location="Richond, BC" onClick={() => {
+                                ToResult();  
+                                data.clickedLocation = "Vara Clothing",
+                                changeData(data)}}/>
+                            <Restaurants name ="Urban Vegan Life ($)" location="Richmond, BC" onClick={() => {
+                                ToResult();  
+                                data.clickedLocation = "Urban Vegan Life",
+                                changeData(data)}}/>
                         </div>
                     </div>
                     </div>
                         <NavigationBar />
                 </div>
-            } else if (data.veganismBudget == "money2") {
+            } else if (data.veganismBudget == "$$") {
                 return <div> 
                 <div className="rest-page">
                     <BackHeader/>
@@ -163,15 +226,24 @@ const StoresPage = ({}) => {
                             <Header text="Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Aberdeen Vegan ($$)" location="Richmond, BC" onClick={ToResult} />
-                            <Restaurants name ="Mervegan ($$)" location="Richmond, BC"/>
-                            <Restaurants name ="Oak & Frank ($$)" location="Richmond, BC"/>
+                            <Restaurants name="Aberdeen Vegan ($$)" location="Richmond, BC" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Aberdeen Vegan",
+                                changeData(data)}}/>
+                            <Restaurants name ="Mervegan ($$)" location="Richmond, BC" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Mervegan",
+                                changeData(data)}}/>
+                            <Restaurants name ="Oak & Frank ($$)" location="Richmond, BC" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Oak & Frank",
+                                changeData(data)}}/>
                         </div>
                     </div>
                     </div>
                         <NavigationBar />
                 </div>
-            } else if (data.veganismBudget == "money3") {
+            } else if (data.veganismBudget == "$$$") {
                 return <div> 
                 <div className="rest-page">
                     <BackHeader/>
@@ -181,9 +253,18 @@ const StoresPage = ({}) => {
                             <Header text="Stores" fontSize={12}/>
                         </div>
                         <div className="rest-listings">
-                            <Restaurants name="Hudson's Tree ($$$)" location="Richmond, BC" onClick={ToResult} />
-                            <Restaurants name ="Muvi ($$$)" location="Richmond, BC"/>
-                            <Restaurants name ="Sevora ($$$)" location="Richmond, BC" />
+                            <Restaurants name="Hudson's Tree ($$$)" location="Richmond, BC" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Hudson's Tree",
+                                changeData(data)}}/>
+                            <Restaurants name ="Muvi ($$$)" location="Richmond, BC" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Muvi",
+                                changeData(data)}}/>
+                            <Restaurants name ="Sevora ($$$)" location="Richmond, BC" onClick={() => {
+                                ToResult(); 
+                                data.clickedLocation = "Sevora",
+                                changeData(data)}}/>
                         </div>
                     </div>
                     </div>
