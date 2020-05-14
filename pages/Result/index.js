@@ -9,16 +9,12 @@ import NavigationBar from "../../comps/NavigationBar";
 import { data } from "../../data";
 
 const ResultPage = () => {
-switch (data.veganismType) {
-    case "food":
-        
-}
     return <div>
     <div className="r-pg">
         <BackHeader />
         <div className="r-container">
             <div className="r-head">
-                <Header text="Grocery / Store / Restaurant Name" fontSize={14}/>
+                <Header text={data.clickedLocation} fontSize={14}/>
             </div>
             <div className="r-img"></div>
             <div className="adr">

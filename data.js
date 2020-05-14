@@ -2,13 +2,17 @@ export var data = {
     veganismType: "",
     veganismMakeOrDIY: "",
     veganismLocation: "",
-    veganismBudget: ""
+    veganismBudget: "",
+    clickedLocation: ""
 }
 
 if (process.browser) {
     var sessiondata = sessionStorage.getItem("data");
-    changeData(JSON.parse(sessiondata));
+    if(sessiondata !== null){
+		changeData(JSON.parse(sessiondata));
+	}
 }
+
 
 export function changeData(d) {
     data = d;

@@ -195,7 +195,7 @@ const AccountSetUp = ({}) => {
                         <div className="likert_choice" id="likert_money1">
                             <input type="radio" id="js_likert_money1" value="money1" name="vegan_budget"
                             onClick = {() => {
-                                data.veganismBudget = "money1";
+                                data.veganismBudget = "$$$";
                                 changeData(data);
                                 console.log("Veganism budget = " + data.veganismBudget);
                                 finishClicked(1);
@@ -207,7 +207,7 @@ const AccountSetUp = ({}) => {
                         <div className="likert_choice" id="likert_money2">
                             <input type="radio" id="js_likert_money2" value="money2" name="vegan_budget"
                                 onClick = {() => {
-                                    data.veganismBudget = "money2";
+                                    data.veganismBudget = "$$";
                                     changeData(data);
                                     console.log("Veganism budget = " + data.veganismBudget);
                                 finishClicked(1);
@@ -219,7 +219,7 @@ const AccountSetUp = ({}) => {
                         <div className="likert_choice"  id="likert_money3">
                             <input type="radio" id="js_likert_money3" value="money3" name="vegan_budget"
                                 onClick = {() => {
-                                    data.veganismBudget = "money3";
+                                    data.veganismBudget = "$$$";
                                     changeData(data);
                                     console.log("Veganism budget = " + data.veganismBudget);
                                 finishClicked(1);
