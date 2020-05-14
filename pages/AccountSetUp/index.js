@@ -12,7 +12,7 @@ import { FaTshirt } from "react-icons/fa";
 import { FaGift } from "react-icons/fa";
 import { FaHammer} from "react-icons/fa";
 
-import {data, changeData} from '../data';
+import {data, changeData} from '../../data';
 
 function FinishSetUp() {
     document.querySelector("#asu_page").style.right = "-100%";

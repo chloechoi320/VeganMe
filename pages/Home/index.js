@@ -8,7 +8,7 @@ import CategoryBox from '../../comps/CategoryBox';
 import CategoryBoxforRecipes from '../../comps/CategoryBoxforRecipes';
 import NavigationBar from '../../comps/NavigationBar';
 
-import {data, changeData} from '../data';
+import {data, changeData} from '../../data';
 
 function ClickRecipe() {
     document.querySelector("#home_categorybox1").style.right = "-100%";
