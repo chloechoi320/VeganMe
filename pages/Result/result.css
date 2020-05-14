@@ -2,7 +2,7 @@ body, html {
     margin: 0;
 }
 
-.vph-pg {
+.r-pg {
     margin: 0 auto;
     /* width: 375px; */
     width: 100%;
@@ -16,15 +16,15 @@ body, html {
     padding-top: 35px;
 }
 
-.vph-container {
+.r-container {
     margin: 0 auto;
     max-width: 300px;
     position: relative;
     padding-top: 50px;
 }
 
-.vph-img {
-    background-image: url("https://scontent.fyvr1-1.fna.fbcdn.net/v/t31.0-8/901476_515007801890000_2087370503_o.jpg?_nc_cat=102&_nc_sid=dd9801&_nc_oc=AQkCocwHnLRP0QoZfEhhYnfEgHKBq8gR3OhVf6g-385vu3KD70dwQWojd2HCB0aMXPTPl5rTo_1KXNlAzaTYTyFl&_nc_ht=scontent.fyvr1-1.fna&oh=6a3d613910b9742b59938048a2cd704e&oe=5ED15ED4");
+.r-img {
+    background-image: url("https://images.unsplash.com/photo-1581810223086-68918e9241ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=976&q=80");
     background-size: cover;
     background-position: center;
     position: relative;

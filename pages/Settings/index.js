@@ -7,9 +7,9 @@ import NavigationBar from '../../comps/NavigationBar';
 
 import {GoGear} from 'react-icons/go';
 
-function GoUserPreference() {
+function GoPreference() {
     document.querySelector("#settings_page").style.right = "-100%";
-    Router.push("/UserPreference");
+    Router.push("/AccountSetUp");
 }
 
 const Settings = ({}) => {
@@ -21,7 +21,7 @@ const Settings = ({}) => {
         </div>
         <div id="settings_list>">
             <ul>
-                <li><Header text="User Preference" fontSize={9}/></li>
+                <li onClick={GoPreference}><Header text="Change Preferences" fontSize={9}/></li>
                 <li><Header text="FAQ" fontSize={9}/></li>
                 <li id="border-bottom"><Header text="Tutorial" fontSize={9}/></li>
             </ul>
