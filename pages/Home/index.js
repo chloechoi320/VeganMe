@@ -41,10 +41,10 @@ const Home = ({}) => {
                     <div className="home_page">
                     <div className="head">
                         <div className="home_user">
-                            <FaUserCircle size="4.5em" color="#789174"/>
+                            <img src={require('../logo.png')}/>
                         </div>
                         <div className="home_header">
-                            <Header text="Hello!" fontSize={14}/>
+                            <Header text="VeganMe" fontSize={14}/>
                         </div>
                     </div>
                         <div className="home_categorybox1" onClick={ClickRestaurant}>
@@ -58,10 +58,10 @@ const Home = ({}) => {
                     <div className="home_page">
                     <div className="head">
                         <div className="home_user">
-                            <FaUserCircle size="4.5em" color="#789174"/>
+                            <img src={require('../logo.png')}/>
                         </div>
                         <div className="home_header">
-                            <Header text="Hello!" fontSize={14}/>
+                            <Header text="VeganMe" fontSize={14}/>
                         </div>
                     </div>
                         <div className="home_categorybox1" onClick={ClickGroceriesAndStores}>
@@ -82,10 +82,10 @@ const Home = ({}) => {
                         <div className="home_page">
                         <div className="head">
                             <div className="home_user">
-                                <FaUserCircle size="4.5em" color="#789174"/>
+                                <img src={require('../logo.png')}/>
                             </div>
                             <div className="home_header">
-                                <Header text="Hello!" fontSize={14}/>
+                                <Header text="VeganMe" fontSize={14}/>
                             </div>
                         </div>
                             <div className="home_categorybox1" onClick={ClickStores}>
@@ -99,10 +99,10 @@ const Home = ({}) => {
                         <div className="home_page">
                         <div className="head">
                             <div className="home_user">
-                                <FaUserCircle size="4.5em" color="#789174"/>
+                                <img src={require('../logo.png')}/>
                             </div>
                             <div className="home_header">
-                                <Header text="Hello!" fontSize={14}/>
+                                <Header text="VeganMe" fontSize={14}/>
                             </div>
                         </div>
                             <div className="home_categorybox1" onClick={ClickGroceriesAndStores}>

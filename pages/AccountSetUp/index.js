@@ -34,7 +34,7 @@ const AccountSetUp = ({}) => {
 
     return <div id="asu_page">
         <div id="asu_container">
-            <div id="asu_logo"><img src={require('./logo.png')}/></div>
+            <div id="asu_logo"><img src={require('../logo.png')}/></div>
 
             <Header text="Let's get started with some questions." fontSize={14}/>
 

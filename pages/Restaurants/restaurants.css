@@ -10,7 +10,6 @@ body, html {
     padding-top: 35px;
     height: auto;
     position: relative;
-    box-shadow: 0 0 5px #1e1d1d74;
     color: #1e1d1d;
     display: flex;
     flex-direction: column;
