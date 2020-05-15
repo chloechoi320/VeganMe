@@ -195,7 +195,7 @@ const AccountSetUp = ({}) => {
                         <div className="likert_choice" id="likert_money1">
                             <input type="radio" id="js_likert_money1" value="money1" name="vegan_budget"
                             onClick = {() => {
-                                data.veganismBudget = "$$$";
+                                data.veganismBudget = "$";
                                 changeData(data);
                                 console.log("Veganism budget = " + data.veganismBudget);
                                 finishClicked(1);
