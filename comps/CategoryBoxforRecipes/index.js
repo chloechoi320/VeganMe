@@ -6,6 +6,7 @@ import {FaListUl} from 'react-icons/fa';
 
 const CategoryBoxforRecipes = ({headerText, defaultText, img, description}) => 
 
+<div className="category">
 <div className="category_container">
     <div style={{backgroundImage:img}} className="category_image"></div>
     <div className="category_header_container">
@@ -17,6 +18,7 @@ const CategoryBoxforRecipes = ({headerText, defaultText, img, description}) =>
         </div>
     </div>
     <p class="category_description">{description}</p>
+</div>
 </div>
 
 CategoryBoxforRecipes.defaultProps = {
