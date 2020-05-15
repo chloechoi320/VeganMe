@@ -4,7 +4,7 @@ import './categorybox.css';
 import { MdRestaurant } from 'react-icons/md'
 
 const CategoryBox = ({headerText, defaultText, img, description}) => 
-
+<div className="category">
 <div className="category_container">
     <div style={{backgroundImage:img}} className="category_image"></div>
     <div className="category_header_container">
@@ -18,6 +18,7 @@ const CategoryBox = ({headerText, defaultText, img, description}) =>
         </div>
     </div>
         <p class="category_description">{description}</p>
+</div>
 </div>
 
 CategoryBox.defaultProps = {

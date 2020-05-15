@@ -48,7 +48,7 @@ const Home = ({}) => {
                         </div>
                     </div>
                         <div className="home_categorybox1" onClick={ClickRestaurant}>
-                            <CategoryBox defaultText="Restaurants" description="Find local restaurants to satisfy your cravings."/>
+                            <CategoryBox defaultText="Restaurants" description="Visit these local and popular vegan restaurants to satisfy your cravings... while staying within your budget!"/>
                         </div>
                     </div>
                         <NavigationBar />
@@ -65,7 +65,7 @@ const Home = ({}) => {
                         </div>
                     </div>
                         <div className="home_categorybox1" onClick={ClickGroceriesAndStores}>
-                            <CategoryBox defaultText="Groceries & Stores" description="Find the freshest ingredients you can." img="url(https://images.unsplash.com/photo-1534723452862-4c874018d66d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80)"/>
+                            <CategoryBox defaultText="Groceries & Stores" description="Find the freshest ingredients you can at these local, vegan groceries and stores that fit within your budget." img="url(https://images.unsplash.com/photo-1534723452862-4c874018d66d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80)"/>
                         </div>
                         <div className="home_categorybox2" onClick={ClickRecipe}>
                             <CategoryBoxforRecipes description="Popular and easy-to-make recipes!" img="url(https://images.unsplash.com/photo-1513135065346-a098a63a71ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2249&q=80)"/>
@@ -106,7 +106,7 @@ const Home = ({}) => {
                             </div>
                         </div>
                             <div className="home_categorybox1" onClick={ClickGroceriesAndStores}>
-                                <CategoryBox defaultText="Groceries & Stores" description="Find the supplies and tools you need to create things." img="url(https://images.unsplash.com/photo-1534723452862-4c874018d66d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80)"/>
+                                <CategoryBox defaultText="Groceries & Stores" description="Find the supplies and tools you need to create things at these recommended stores." img="url(https://images.unsplash.com/photo-1534723452862-4c874018d66d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80)"/>
                             </div>
                             <div className="home_categorybox2" onClick={ClickRecipe}>
                                 <CategoryBoxforRecipes defaultText="How To's & DIY's" description="Learn how to create your own items, using only vegan products!" img="url(https://images.unsplash.com/photo-1489435518427-e047d52082f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80)"/>

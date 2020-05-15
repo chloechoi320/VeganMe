@@ -1,6 +1,13 @@
+.list-container {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
 .list-box {
     background-color: #efeeeb;
-    width: 305px;
+    width: 40%;
     height: 100px;
     border-radius: 25px;
     box-shadow: 0 0 5px #00000029;

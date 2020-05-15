@@ -1,6 +1,13 @@
+.category {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+}
+
 .category_container {
-    width: 300px;
-    height: 350px;
+    width: 40%;
+    height: 375px;
     background-color: #EFEEEB;
     border-radius: 25px;
     position: relative;
@@ -21,7 +28,7 @@
 }
 
 .category_description {
-    max-width: 275px;
+    max-width: 90%;
 }
 
 .category_link {
