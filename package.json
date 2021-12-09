@@ -23,7 +23,7 @@
   "homepage": "https://github.com/chloechoi320/VeganMe#readme",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
-    "next": "^9.4.0",
+    "next": "^11.1.3",
     "next-images": "^1.4.0",
     "react": "^16.13.1",
     "react-back-to-top-button": "0.0.14",
